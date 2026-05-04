@@ -1,0 +1,25 @@
+proc SCHEMATIC_test_CMOS_NAND_GATE {} {
+make pulse -orient RXY -name V0 -origin {-150 160}
+make pulse -orient RXY -name A0 -origin {-150 30}
+make CMOS_NAND_GATE3 -name xi0 -origin {10 80}
+make global -orient RXY -name Vdd -origin {200 100}
+make global -name Gnd -origin {180 240}
+make input -name A -origin {-150 70}
+make input -name B -origin {-150 90}
+make output -name Y -origin {110 70}
+  make_wire -150 -10 -220 -10
+  make_wire -220 200 -150 200
+  make_wire -150 70 -90 70
+  make_wire -90 90 -150 90
+  make_wire 110 130 180 130
+  make_wire 180 130 180 240
+  make_wire -220 120 -240 120
+  make_wire -240 120 -240 240
+  make_wire -240 240 180 240
+  make_wire -220 120 -220 -10
+  make_wire -220 120 -220 200
+  make_wire 200 110 200 100
+  make_wire 110 110 200 110
+  make_wire -150 90 -150 120
+}
+

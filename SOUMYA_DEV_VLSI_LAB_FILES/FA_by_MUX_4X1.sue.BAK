@@ -1,0 +1,53 @@
+proc SCHEMATIC_FA_by_MUX_4X1 {} {
+make input -name C -origin {-140 -40}
+make input -name B -origin {-210 -20}
+make inverter -name xi0 -origin {-370 30}
+make input -name A -origin {-490 30}
+make MUX_4X1 -name SUM -origin {20 0}
+make MUX_4X1 -name xi1 -origin {20 320}
+make global -name gnd -origin {-310 400}
+make global -name vdd -origin {-190 400}
+make inout -name a_Gnd -origin {160 410}
+make inout -name a_Vdd -origin {220 410}
+make output -name Sum -origin {120 -40}
+make output -name Carry -origin {120 280}
+  make_wire -120 20 -80 20
+  make_wire -120 40 -80 40
+  make_wire -320 30 -120 30
+  make_wire -300 0 -80 0
+  make_wire -430 30 -400 30
+  make_wire -430 30 -490 30
+  make_wire -430 80 -300 80
+  make_wire -300 60 -80 60
+  make_wire -300 -30 -300 0
+  make_wire -300 60 -300 80
+  make_wire -120 20 -120 30
+  make_wire -120 30 -120 40
+  make_wire -80 -40 -140 -40
+  make_wire -430 -30 -300 -30
+  make_wire -80 -20 -210 -20
+  make_wire -210 -20 -210 300
+  make_wire -80 300 -210 300
+  make_wire -140 -40 -140 280
+  make_wire -140 280 -80 280
+  make_wire -430 -30 -430 30
+  make_wire -430 30 -430 80
+  make_wire -430 80 -430 340
+  make_wire -120 340 -120 360
+  make_wire -120 360 -80 360
+  make_wire -120 340 -430 340
+  make_wire -120 340 -80 340
+  make_wire -190 400 -190 380
+  make_wire -190 380 -80 380
+  make_wire -310 400 -310 320
+  make_wire -310 320 -80 320
+  make_wire 120 20 160 20
+  make_wire 120 340 160 340
+  make_wire 160 340 160 20
+  make_wire 160 340 160 410
+  make_wire 120 0 220 0
+  make_wire 120 320 220 320
+  make_wire 220 320 220 0
+  make_wire 220 320 220 410
+}
+

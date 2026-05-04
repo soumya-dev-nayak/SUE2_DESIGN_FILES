@@ -1,0 +1,45 @@
+proc SCHEMATIC_test_4X1_mux {} {
+make global -name Vdd -origin {-990 -1370}
+make global -name Gnd -origin {-1000 -1210}
+make output -name Y -origin {-940 -1490}
+make input -name s0 -origin {-1870 -1490}
+make input -name s1 -origin {-1730 -1470}
+make input -name i0 -origin {-1620 -1450}
+make input -name i1 -origin {-1520 -1430}
+make input -name i2 -origin {-1420 -1410}
+make input -name i3 -origin {-1330 -1390}
+make pulse -name V0 -pulse_voltage 1.3V -origin {-1870 -1450}
+make MUX_4X1 -name xi0 -origin {-1180 -1450}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 4ns -period 8ns -origin {-1730 -1430}
+make pulse -name V2 -pulse_voltage 1.3V -pulse_width 2ns -period 4ns -origin {-1610 -1410}
+make pulse -name V3 -pulse_voltage 1.3V -origin {-1520 -1390}
+make pulse -name V4 -pulse_voltage 1.3V -pulse_width 5ns -period 10ns -origin {-1420 -1370}
+make pulse -name V5 -pulse_voltage 1.3V -pulse_width 6ns -period 12ns -origin {-1330 -1350}
+  make_wire -1280 -1490 -1870 -1490
+  make_wire -1280 -1470 -1730 -1470
+  make_wire -1610 -1450 -1280 -1450
+  make_wire -1610 -1450 -1620 -1450
+  make_wire -1280 -1430 -1520 -1430
+  make_wire -1280 -1410 -1420 -1410
+  make_wire -1280 -1390 -1330 -1390
+  make_wire -1080 -1430 -1040 -1430
+  make_wire -1870 -1410 -1870 -1240
+  make_wire -1040 -1240 -1040 -1430
+  make_wire -1000 -1240 -1000 -1210
+  make_wire -1330 -1310 -1330 -1240
+  make_wire -1420 -1330 -1420 -1240
+  make_wire -1420 -1240 -1330 -1240
+  make_wire -1520 -1350 -1520 -1240
+  make_wire -1520 -1240 -1420 -1240
+  make_wire -1610 -1370 -1610 -1240
+  make_wire -1610 -1240 -1520 -1240
+  make_wire -1730 -1390 -1730 -1240
+  make_wire -1730 -1240 -1610 -1240
+  make_wire -1730 -1240 -1870 -1240
+  make_wire -1080 -1450 -990 -1450
+  make_wire -990 -1450 -990 -1370
+  make_wire -1330 -1240 -1040 -1240
+  make_wire -1040 -1240 -1000 -1240
+  make_wire -1080 -1490 -940 -1490
+}
+

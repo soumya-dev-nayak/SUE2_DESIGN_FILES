@@ -1,0 +1,146 @@
+proc SCHEMATIC_CMOS_2X1_MUX {} {
+make pmos4 -name M0 -origin {-2730 -2870}
+make nmos4 -name M1 -origin {-2730 -2770}
+make input -name S -origin {-2980 -2820}
+make pmos4 -name M2 -origin {-2570 -2960}
+make pmos4 -name M3 -origin {-2410 -2960}
+make pmos4 -name M4 -origin {-2570 -2820}
+make pmos4 -name M5 -origin {-2410 -2730}
+make nmos4 -name M6 -origin {-2570 -2480}
+make nmos4 -name M7 -origin {-2410 -2530}
+make nmos4 -name M8 -origin {-2570 -2360}
+make nmos4 -name M9 -origin {-2410 -2300}
+make input -name I0 -origin {-2970 -2710}
+make input -name I1 -origin {-2970 -2630}
+make inout -name a_Gnd -origin {-2570 -1990}
+make inout -name a_Vdd -origin {-2570 -3190}
+make output -name Y -origin {-1950 -2620}
+make pmos4 -name M10 -origin {-2220 -2670}
+make nmos4 -name M11 -origin {-2220 -2570}
+  make_wire -2730 -2870 -2680 -2870
+  make_wire -2680 -2770 -2680 -2730
+  make_wire -2730 -2830 -2730 -2820
+  make_wire -2730 -2820 -2730 -2810
+  make_wire -2730 -2770 -2680 -2770
+  make_wire -2730 -2730 -2680 -2730
+  make_wire -2680 -2910 -2680 -2870
+  make_wire -2730 -2910 -2680 -2910
+  make_wire -2570 -2900 -2410 -2900
+  make_wire -2630 -2820 -2730 -2820
+  make_wire -2540 -3010 -2570 -3010
+  make_wire -2370 -3010 -2410 -3010
+  make_wire -2540 -3010 -2540 -2960
+  make_wire -2410 -2960 -2370 -2960
+  make_wire -2570 -2960 -2540 -2960
+  make_wire -2570 -3110 -2570 -3010
+  make_wire -2570 -3010 -2570 -3000
+  make_wire -2370 -2730 -2410 -2730
+  make_wire -2540 -2960 -2540 -2820
+  make_wire -2570 -2520 -2570 -2600
+  make_wire -2410 -2600 -2410 -2570
+  make_wire -2570 -2480 -2500 -2480
+  make_wire -2500 -2120 -2570 -2120
+  make_wire -2500 -2120 -2410 -2120
+  make_wire -2570 -2360 -2500 -2360
+  make_wire -2410 -2530 -2340 -2530
+  make_wire -2340 -2120 -2410 -2120
+  make_wire -2410 -2300 -2340 -2300
+  make_wire -2730 -3110 -2570 -3110
+  make_wire -2570 -3110 -2410 -3110
+  make_wire -2730 -3110 -2730 -2910
+  make_wire -2570 -2820 -2540 -2820
+  make_wire -2410 -3110 -2410 -3010
+  make_wire -2410 -3010 -2410 -3000
+  make_wire -2570 -2920 -2570 -2900
+  make_wire -2570 -2900 -2570 -2860
+  make_wire -2810 -2960 -2810 -2870
+  make_wire -2790 -2870 -2810 -2870
+  make_wire -2790 -2770 -2810 -2770
+  make_wire -2810 -2820 -2980 -2820
+  make_wire -2730 -2120 -2570 -2120
+  make_wire -2730 -2120 -2730 -2730
+  make_wire -2500 -2710 -2500 -2960
+  make_wire -2500 -2960 -2470 -2960
+  make_wire -2370 -3010 -2370 -2960
+  make_wire -2370 -2960 -2370 -2730
+  make_wire -2410 -2920 -2410 -2900
+  make_wire -2410 -2900 -2410 -2770
+  make_wire -2570 -2640 -2490 -2640
+  make_wire -2490 -2640 -2410 -2640
+  make_wire -2570 -2780 -2570 -2640
+  make_wire -2410 -2690 -2410 -2640
+  make_wire -2970 -2630 -2770 -2630
+  make_wire -2770 -2630 -2770 -2680
+  make_wire -2470 -2680 -2470 -2730
+  make_wire -2410 -2260 -2410 -2120
+  make_wire -2660 -2480 -2630 -2480
+  make_wire -2660 -2960 -2810 -2960
+  make_wire -2660 -2960 -2630 -2960
+  make_wire -2660 -2960 -2660 -2480
+  make_wire -2340 -2530 -2340 -2300
+  make_wire -2340 -2300 -2340 -2120
+  make_wire -2570 -2600 -2490 -2600
+  make_wire -2490 -2600 -2410 -2600
+  make_wire -2410 -2490 -2410 -2340
+  make_wire -2500 -2360 -2500 -2480
+  make_wire -2500 -2360 -2500 -2120
+  make_wire -2570 -2440 -2570 -2400
+  make_wire -2570 -2320 -2570 -2120
+  make_wire -2810 -2870 -2810 -2820
+  make_wire -2810 -2820 -2810 -2770
+  make_wire -2630 -2820 -2630 -2530
+  make_wire -2630 -2530 -2470 -2530
+  make_wire -2680 -2710 -2680 -2360
+  make_wire -2680 -2360 -2630 -2360
+  make_wire -2680 -2710 -2970 -2710
+  make_wire -2680 -2710 -2500 -2710
+  make_wire -2710 -2680 -2710 -2300
+  make_wire -2710 -2300 -2470 -2300
+  make_wire -2710 -2680 -2770 -2680
+  make_wire -2710 -2680 -2470 -2680
+  make_wire -2570 -3190 -2570 -3110
+  make_wire -2570 -1990 -2570 -2120
+  make_wire -2280 -2670 -2330 -2670
+  make_wire -2330 -2570 -2280 -2570
+  make_wire -2220 -2670 -2170 -2670
+  make_wire -2170 -2570 -2170 -2530
+  make_wire -2220 -2630 -2220 -2620
+  make_wire -2220 -2620 -2220 -2610
+  make_wire -2330 -2670 -2330 -2620
+  make_wire -2330 -2620 -2330 -2570
+  make_wire -2220 -2570 -2170 -2570
+  make_wire -2220 -2530 -2170 -2530
+  make_wire -2170 -2710 -2170 -2670
+  make_wire -2220 -2710 -2170 -2710
+  make_wire -2330 -2620 -2490 -2620
+  make_wire -2490 -2640 -2490 -2620
+  make_wire -2490 -2620 -2490 -2600
+  make_wire -1950 -2620 -2220 -2620
+  make_wire -2220 -3110 -2410 -3110
+  make_wire -2220 -3110 -2220 -2710
+  make_wire -2220 -2120 -2340 -2120
+  make_wire -2220 -2120 -2220 -2530
+}
+
+proc ICON_CMOS_2X1_MUX args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -10} -name S
+icon_term -type input -origin {-100 10} -name I0
+icon_term -type input -origin {-100 30} -name I1
+icon_term -type output -origin {100 -10} -name Y
+icon_term -type inout -origin {100 30} -name a_Gnd
+icon_term -type inout -origin {100 50} -name a_Vdd
+icon_property -origin {-90 -10} -label S
+icon_property -origin {-90 10} -label I0
+icon_property -origin {-90 30} -label I1
+icon_property -origin {90 -10} -anchor e -label Y
+icon_property -origin {90 30} -anchor e -label a_Gnd
+icon_property -origin {90 50} -anchor e -label a_Vdd
+icon_property -origin {-90 -60} -label {$name}
+icon_property -origin {-90 -40} -label CMOS_2X1_MUX
+  icon_line -100 -50 100 -50 100 70 -100 70 -100 -50
+icon_property -origin {-90 80} -label {example_param=$example_param}
+  icon_property -origin {-90 140} -type user -name name -default x
+  icon_property -origin {-90 160} -type user -name example_param -default 1.0
+}
+

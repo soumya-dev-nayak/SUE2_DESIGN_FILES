@@ -1,0 +1,67 @@
+proc SCHEMATIC_CMOS_NAND_GATE3 {} {
+make output -name Out -origin {770 420}
+make inout -name a_Vdd -origin {770 110}
+make inout -name a_Gnd -origin {820 710}
+make input -name in1 -origin {470 220}
+make pmos4 -name M0 -origin {710 220}
+make nmos4 -name M2 -origin {730 470}
+make nmos4 -name M3 -origin {730 570}
+make pmos4 -name M1 -origin {810 300}
+make input -name in2 -origin {470 300}
+  make_wire 710 180 710 140
+  make_wire 770 220 710 220
+  make_wire 620 470 670 470
+  make_wire 730 470 820 470
+  make_wire 840 260 810 260
+  make_wire 840 140 840 260
+  make_wire 840 260 840 300
+  make_wire 770 110 770 140
+  make_wire 770 140 770 220
+  make_wire 710 140 770 140
+  make_wire 770 140 840 140
+  make_wire 810 300 840 300
+  make_wire 730 510 730 530
+  make_wire 730 660 820 660
+  make_wire 730 570 730 610
+  make_wire 730 660 730 610
+  make_wire 710 240 710 260
+  make_wire 710 260 710 370
+  make_wire 730 420 770 420
+  make_wire 730 370 730 420
+  make_wire 730 420 730 430
+  make_wire 620 470 620 220
+  make_wire 470 220 620 220
+  make_wire 620 220 650 220
+  make_wire 590 300 590 570
+  make_wire 590 570 670 570
+  make_wire 590 300 750 300
+  make_wire 590 300 470 300
+  make_wire 810 340 810 370
+  make_wire 710 370 730 370
+  make_wire 730 370 810 370
+  make_wire 820 470 820 660
+  make_wire 820 660 820 710
+}
+
+proc ICON_CMOS_NAND_GATE3 args {
+
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -10} -name in1
+icon_term -type input -origin {-100 10} -name in2
+icon_term -type output -origin {100 -10} -name Out
+icon_term -type inout -origin {100 30} -name a_Vdd
+icon_term -type inout -origin {100 50} -name a_Gnd
+icon_property -origin {-90 -10} -label in1
+icon_property -origin {-90 10} -label in2
+icon_property -origin {90 -10} -anchor e -label Out
+icon_property -origin {90 30} -anchor e -label a_Vdd
+icon_property -origin {90 50} -anchor e -label a_Gnd
+icon_property -origin {-90 -60} -label {$name}
+icon_property -origin {-90 -40} -label CMOS_NAND_GATE3
+  icon_line -100 -50 100 -50 100 70 -100 70 -100 -50
+icon_property -origin {-90 80} -label {example_param=$example_param}
+  icon_property -origin {-90 140} -type user -name name -default x
+  icon_property -origin {-90 160} -type user -name example_param -default 1.0
+
+}
+

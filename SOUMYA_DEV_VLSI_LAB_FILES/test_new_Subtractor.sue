@@ -1,0 +1,32 @@
+proc SCHEMATIC_test_new_Subtractor {} {
+make my_SUBTRACTOR -name xi0 -origin {-60 60}
+make output -name Diff -origin {140 20}
+make output -name Bout -origin {140 60}
+make input -name X -origin {-460 10}
+make input -name Y -origin {-350 60}
+make input -name Bin -origin {-230 100}
+make global -name Vdd -origin {70 160}
+make global -name Gnd -origin {160 290}
+make pulse -name V0 -pulse_voltage 1.3V -origin {-460 50}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 4ns -period 8ns -origin {-350 100}
+make pulse -name V2 -pulse_voltage 1.3V -pulse_width 5ns -period 10ns -origin {-230 140}
+  make_wire 140 60 40 60
+  make_wire 40 20 140 20
+  make_wire 40 20 40 40
+  make_wire -160 10 -460 10
+  make_wire -160 10 -160 40
+  make_wire -160 60 -350 60
+  make_wire -160 100 -230 100
+  make_wire -160 80 -160 100
+  make_wire 40 100 160 100
+  make_wire 160 100 160 290
+  make_wire 40 120 70 120
+  make_wire 70 120 70 160
+  make_wire -230 180 -230 290
+  make_wire -230 290 160 290
+  make_wire -350 140 -350 290
+  make_wire -350 290 -230 290
+  make_wire -460 90 -460 290
+  make_wire -460 290 -350 290
+}
+

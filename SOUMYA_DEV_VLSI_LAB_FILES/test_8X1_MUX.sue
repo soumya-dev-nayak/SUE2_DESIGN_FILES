@@ -1,0 +1,82 @@
+proc SCHEMATIC_test_8X1_MUX {} {
+make MUX_8X1 -name xi0 -origin {-30 50}
+make input -name s0 -origin {-210 -40}
+make input -name s1 -origin {-350 -20}
+make input -name s2 -origin {-470 0}
+make input -name i0 -origin {-570 20}
+make input -name i1 -origin {-660 40}
+make input -name i2 -origin {-660 60}
+make input -name i3 -origin {-560 80}
+make input -name i4 -origin {-470 100}
+make input -name i5 -origin {-370 120}
+make input -name i6 -origin {-280 140}
+make input -name i7 -origin {-200 160}
+make output -name y -origin {150 -40}
+make global -name Vdd -origin {170 130}
+make global -name Gnd -origin {110 340}
+make pulse -orient RXY -name V10 -pulse_voltage 1.3V -pulse_width 5ns -period 10ns -origin {-210 -200}
+make pulse -orient RXY -name V6 -pulse_voltage 1.3V -pulse_width 10ns -period 20ns -origin {-350 -150}
+make pulse -orient RXY -name V7 -pulse_voltage 1.3V -pulse_width 20ns -period 40ns -origin {-470 -100}
+make pulse -orient RXY -name V8 -pulse_voltage 1.3V -pulse_width 40ns -period 80ns -origin {-560 -40}
+make pulse -orient RXY -name V9 -pulse_width 40ns -period 80ns -origin {-660 0}
+make pulse -name V0 -pulse_voltage 1.3V -pulse_width 40ns -period 80ns -origin {-660 100}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 40ns -period 80ns -origin {-560 160}
+make pulse -name V2 -pulse_voltage 1.3V -pulse_width 40ns -period 80ns -origin {-470 170}
+make pulse -name V3 -pulse_voltage 1.3V -pulse_width 40ns -period 80ns -origin {-370 190}
+make pulse -name V4 -pulse_voltage 1.3V -pulse_width 40ns -period 80ns -origin {-280 230}
+make pulse -name V5 -pulse_voltage 1.3V -pulse_width 40ns -period 80ns -origin {-180 260}
+  make_wire -130 -40 -210 -40
+  make_wire -130 -20 -350 -20
+  make_wire -130 0 -470 0
+  make_wire -130 40 -660 40
+  make_wire -130 60 -660 60
+  make_wire -130 100 -470 100
+  make_wire -130 120 -370 120
+  make_wire -130 140 -280 140
+  make_wire -180 160 -130 160
+  make_wire -180 160 -200 160
+  make_wire -560 80 -130 80
+  make_wire -280 320 -180 320
+  make_wire -370 320 -280 320
+  make_wire -470 320 -370 320
+  make_wire -560 320 -470 320
+  make_wire -560 320 -660 320
+  make_wire 70 -40 150 -40
+  make_wire -660 -140 -750 -140
+  make_wire -750 -140 -750 180
+  make_wire -750 180 -660 180
+  make_wire -660 180 -660 140
+  make_wire -660 180 -660 320
+  make_wire -660 -140 -660 -40
+  make_wire -660 -140 -660 -240
+  make_wire 70 20 110 20
+  make_wire 70 0 170 0
+  make_wire 170 0 170 130
+  make_wire -180 320 110 320
+  make_wire 110 320 110 20
+  make_wire 110 320 110 340
+  make_wire -560 -240 -560 -80
+  make_wire -560 0 -560 20
+  make_wire -570 20 -560 20
+  make_wire -560 20 -130 20
+  make_wire -560 -240 -660 -240
+  make_wire -560 -240 -470 -240
+  make_wire -470 -60 -470 0
+  make_wire -470 -240 -470 -140
+  make_wire -350 -110 -350 -20
+  make_wire -350 -240 -350 -190
+  make_wire -470 -240 -350 -240
+  make_wire -350 -240 -210 -240
+  make_wire -210 -160 -210 -40
+  make_wire -180 160 -180 220
+  make_wire -180 300 -180 320
+  make_wire -370 120 -370 150
+  make_wire -370 230 -370 320
+  make_wire -470 210 -470 320
+  make_wire -470 100 -470 130
+  make_wire -560 200 -560 320
+  make_wire -560 80 -560 120
+  make_wire -280 270 -280 320
+  make_wire -280 140 -280 190
+}
+

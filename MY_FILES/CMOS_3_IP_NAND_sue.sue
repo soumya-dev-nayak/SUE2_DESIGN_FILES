@@ -1,0 +1,85 @@
+proc SCHEMATIC_CMOS_3_IP_NAND_sue {} {
+make inout -name a_Vdd -origin {-450 -360}
+make inout -name a_Gnd -origin {-330 690}
+make input -name A -origin {-840 -120}
+make input -name B -origin {-840 -60}
+make input -name C -origin {-840 20}
+make output -name Y -origin {-180 130}
+make pmos4 -name M0 -origin {-590 -120}
+make pmos4 -name M1 -origin {-450 -60}
+make pmos4 -name M2 -origin {-330 20}
+make nmos4 -name M3 -origin {-330 260}
+make nmos4 -name M4 -origin {-330 370}
+make nmos4 -name M5 -origin {-330 500}
+  make_wire -310 20 -330 20
+  make_wire -590 -80 -590 130
+  make_wire -450 -20 -450 130
+  make_wire -330 300 -330 330
+  make_wire -330 410 -330 460
+  make_wire -390 20 -410 20
+  make_wire -410 260 -390 260
+  make_wire -510 -60 -530 -60
+  make_wire -530 370 -390 370
+  make_wire -650 -120 -660 -120
+  make_wire -660 500 -390 500
+  make_wire -590 -230 -450 -230
+  make_wire -590 130 -450 130
+  make_wire -450 130 -330 130
+  make_wire -590 -120 -560 -120
+  make_wire -560 -120 -560 -170
+  make_wire -560 -170 -590 -170
+  make_wire -590 -170 -590 -230
+  make_wire -450 -60 -420 -60
+  make_wire -420 -60 -420 -120
+  make_wire -420 -120 -450 -120
+  make_wire -450 -120 -450 -100
+  make_wire -590 -170 -590 -160
+  make_wire -310 20 -310 -30
+  make_wire -330 -30 -310 -30
+  make_wire -330 -230 -330 -30
+  make_wire -330 -30 -330 -20
+  make_wire -450 -230 -330 -230
+  make_wire -450 -360 -450 -230
+  make_wire -450 -230 -450 -120
+  make_wire -330 260 -260 260
+  make_wire -260 610 -330 610
+  make_wire -330 610 -330 540
+  make_wire -330 610 -330 690
+  make_wire -330 500 -260 500
+  make_wire -260 500 -260 610
+  make_wire -330 370 -260 370
+  make_wire -260 370 -260 500
+  make_wire -260 370 -260 260
+  make_wire -660 -120 -840 -120
+  make_wire -660 -120 -660 500
+  make_wire -530 -60 -840 -60
+  make_wire -530 -60 -530 370
+  make_wire -410 20 -840 20
+  make_wire -410 20 -410 260
+  make_wire -330 130 -180 130
+  make_wire -330 60 -330 130
+  make_wire -330 130 -330 220
+}
+
+proc ICON_CMOS_3_IP_NAND_sue args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -10} -name A
+icon_term -type input -origin {-100 10} -name B
+icon_term -type input -origin {-100 30} -name C
+icon_term -type output -origin {100 -10} -name Y
+icon_term -type inout -origin {100 30} -name a_Vdd
+icon_term -type inout -origin {100 50} -name a_Gnd
+icon_property -origin {-90 -10} -label A
+icon_property -origin {-90 10} -label B
+icon_property -origin {-90 30} -label C
+icon_property -origin {90 -10} -anchor e -label Y
+icon_property -origin {90 30} -anchor e -label a_Vdd
+icon_property -origin {90 50} -anchor e -label a_Gnd
+icon_property -origin {-90 -60} -label {$name}
+icon_property -origin {-90 -40} -label CMOS_3_IP_NAND_sue
+  icon_line -100 -50 100 -50 100 70 -100 70 -100 -50
+icon_property -origin {-90 80} -label {example_param=$example_param}
+  icon_property -origin {-90 140} -type user -name name -default x
+  icon_property -origin {-90 160} -type user -name example_param -default 1.0
+}
+

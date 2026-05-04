@@ -1,0 +1,227 @@
+proc SCHEMATIC_CMOS_HALF_SUBTRACTOR {} {
+make inout -name a_Vdd -origin {-2880 -2200}
+make inout -name a_Gnd -origin {-2790 -500}
+make input -name A -origin {-3880 -1830}
+make input -name B -origin {-3890 -1430}
+make pmos4 -name M0 -origin {-2740 -1870}
+make pmos4 -orient RXY -name M1 -origin {-2580 -1690}
+make pmos4 -name M2 -origin {-2740 -1690}
+make nmos4 -orient RXY -name M3 -origin {-2580 -1470}
+make nmos4 -orient RXY -name M4 -origin {-2580 -1340}
+make pmos4 -orient RXY -name M5 -origin {-2580 -1870}
+make pmos4 -name M6 -origin {-2980 -1880}
+make nmos4 -name M7 -origin {-2980 -1780}
+make pmos4 -name M8 -origin {-2960 -1480}
+make nmos4 -name M9 -origin {-2970 -1370}
+make nmos4 -name M10 -origin {-2740 -1470}
+make nmos4 -name M11 -origin {-2740 -1340}
+make pmos4 -name M12 -origin {-3520 -1180}
+make pmos4 -name M13 -origin {-3280 -1100}
+make nmos4 -name M14 -origin {-3390 -860}
+make nmos4 -name M15 -origin {-3390 -690}
+make pmos4 -name M16 -origin {-3050 -970}
+make nmos4 -name M17 -origin {-3050 -870}
+make output -name Diff -origin {-1920 -1570}
+make output -name Borrow -origin {-1910 -920}
+  make_wire -2580 -1780 -2580 -1730
+  make_wire -2740 -1650 -2740 -1620
+  make_wire -2580 -1620 -2580 -1650
+  make_wire -2740 -1510 -2740 -1540
+  make_wire -2580 -1540 -2580 -1510
+  make_wire -2580 -1830 -2580 -1780
+  make_wire -3100 -1830 -3080 -1830
+  make_wire -3070 -1370 -3030 -1370
+  make_wire -3120 -1430 -3070 -1430
+  make_wire -3020 -1480 -3070 -1480
+  make_wire -3040 -1880 -3080 -1880
+  make_wire -3040 -1880 -3030 -1880
+  make_wire -2980 -2040 -2880 -2040
+  make_wire -2740 -2040 -2880 -2040
+  make_wire -2860 -1650 -3100 -1650
+  make_wire -2460 -1870 -2520 -1870
+  make_wire -2660 -1570 -1920 -1570
+  make_wire -2990 -1680 -3170 -1680
+  make_wire -3170 -1680 -3170 -1300
+  make_wire -3140 -1590 -2960 -1590
+  make_wire -2950 -1880 -2950 -1930
+  make_wire -2660 -2040 -2740 -2040
+  make_wire -2960 -1480 -2920 -1480
+  make_wire -2920 -1480 -2920 -1560
+  make_wire -2920 -1560 -2960 -1560
+  make_wire -2960 -1560 -2960 -1590
+  make_wire -2980 -1880 -2950 -1880
+  make_wire -2950 -1930 -2980 -1930
+  make_wire -2980 -1930 -2980 -2040
+  make_wire -2740 -1230 -2650 -1230
+  make_wire -2650 -1230 -2580 -1230
+  make_wire -2850 -1210 -2500 -1210
+  make_wire -2660 -1870 -2580 -1870
+  make_wire -3040 -1780 -3080 -1780
+  make_wire -2660 -1870 -2740 -1870
+  make_wire -2660 -1690 -2740 -1690
+  make_wire -2660 -1690 -2580 -1690
+  make_wire -2660 -1870 -2660 -2040
+  make_wire -2880 -2200 -2880 -2040
+  make_wire -2960 -1560 -2960 -1520
+  make_wire -2980 -1930 -2980 -1920
+  make_wire -2580 -2040 -2580 -1910
+  make_wire -2740 -2040 -2740 -1910
+  make_wire -2940 -1370 -2940 -1300
+  make_wire -2580 -1780 -2740 -1780
+  make_wire -2860 -1870 -2800 -1870
+  make_wire -2970 -1430 -2970 -1410
+  make_wire -2800 -1470 -2860 -1470
+  make_wire -2810 -1340 -2810 -1190
+  make_wire -2460 -1950 -2460 -1870
+  make_wire -3200 -1950 -2460 -1950
+  make_wire -2450 -1160 -2890 -1160
+  make_wire -2450 -1470 -2520 -1470
+  make_wire -2740 -1830 -2740 -1780
+  make_wire -2740 -1780 -2740 -1730
+  make_wire -2660 -1870 -2660 -1690
+  make_wire -2740 -1620 -2660 -1620
+  make_wire -2660 -1620 -2580 -1620
+  make_wire -2800 -1690 -2890 -1690
+  make_wire -2890 -1840 -2890 -1690
+  make_wire -2450 -1470 -2450 -1160
+  make_wire -2650 -1470 -2650 -1340
+  make_wire -2580 -1430 -2580 -1380
+  make_wire -2520 -1690 -2500 -1690
+  make_wire -2580 -1340 -2650 -1340
+  make_wire -2580 -1470 -2650 -1470
+  make_wire -2970 -1370 -2940 -1370
+  make_wire -2970 -1430 -2960 -1430
+  make_wire -2960 -1430 -2850 -1430
+  make_wire -3070 -1480 -3070 -1430
+  make_wire -3070 -1430 -3070 -1370
+  make_wire -2580 -1300 -2580 -1230
+  make_wire -2740 -1470 -2650 -1470
+  make_wire -2860 -1870 -2860 -1650
+  make_wire -2860 -1650 -2860 -1470
+  make_wire -2740 -1540 -2660 -1540
+  make_wire -2660 -1540 -2580 -1540
+  make_wire -3120 -1190 -2810 -1190
+  make_wire -2740 -1300 -2740 -1230
+  make_wire -2740 -1430 -2740 -1380
+  make_wire -2740 -1340 -2650 -1340
+  make_wire -2960 -1440 -2960 -1430
+  make_wire -2800 -1340 -2810 -1340
+  make_wire -3120 -1430 -3120 -1190
+  make_wire -3520 -1220 -3520 -1360
+  make_wire -3520 -1180 -3440 -1180
+  make_wire -3440 -1180 -3440 -1360
+  make_wire -3230 -1100 -3280 -1100
+  make_wire -3520 -1140 -3520 -1020
+  make_wire -3280 -1020 -3280 -1060
+  make_wire -2970 -1330 -2970 -1300
+  make_wire -2970 -1300 -2970 -1100
+  make_wire -2970 -1300 -3170 -1300
+  make_wire -2970 -1300 -2940 -1300
+  make_wire -2650 -1340 -2650 -1230
+  make_wire -2650 -1230 -2650 -1100
+  make_wire -3200 -1430 -3200 -1950
+  make_wire -3200 -1430 -3120 -1430
+  make_wire -2520 -1340 -2500 -1340
+  make_wire -2850 -1430 -2850 -1210
+  make_wire -2500 -1690 -2500 -1340
+  make_wire -2500 -1340 -2500 -1210
+  make_wire -2660 -2040 -2580 -2040
+  make_wire -2660 -1620 -2660 -1570
+  make_wire -2660 -1570 -2660 -1540
+  make_wire -3680 -1180 -3580 -1180
+  make_wire -3140 -1590 -3140 -2040
+  make_wire -3390 -820 -3390 -730
+  make_wire -3140 -2040 -2980 -2040
+  make_wire -2970 -1100 -2790 -1100
+  make_wire -2650 -1100 -2790 -1100
+  make_wire -3390 -650 -3390 -530
+  make_wire -3390 -690 -3180 -690
+  make_wire -3180 -690 -3180 -530
+  make_wire -3180 -530 -3390 -530
+  make_wire -3390 -860 -3180 -860
+  make_wire -3180 -860 -3180 -690
+  make_wire -3680 -860 -3450 -860
+  make_wire -3280 -1360 -3280 -1140
+  make_wire -3520 -1020 -3390 -1020
+  make_wire -3390 -1020 -3280 -1020
+  make_wire -3580 -690 -3450 -690
+  make_wire -3620 -1100 -3580 -1100
+  make_wire -3580 -1100 -3340 -1100
+  make_wire -3580 -1100 -3580 -690
+  make_wire -3620 -1430 -3890 -1430
+  make_wire -3620 -1430 -3200 -1430
+  make_wire -3110 -970 -3160 -970
+  make_wire -3160 -870 -3110 -870
+  make_wire -3050 -970 -3000 -970
+  make_wire -3000 -870 -3000 -830
+  make_wire -3160 -970 -3160 -920
+  make_wire -3160 -920 -3160 -870
+  make_wire -3050 -870 -3000 -870
+  make_wire -3050 -830 -3000 -830
+  make_wire -3000 -1010 -3000 -970
+  make_wire -3050 -1010 -3000 -1010
+  make_wire -3050 -1060 -3050 -1010
+  make_wire -3390 -920 -3160 -920
+  make_wire -3390 -920 -3390 -1020
+  make_wire -3390 -920 -3390 -900
+  make_wire -3230 -1060 -3050 -1060
+  make_wire -3230 -1100 -3230 -1360
+  make_wire -3230 -1100 -3230 -1060
+  make_wire -3050 -530 -3050 -830
+  make_wire -3050 -530 -3180 -530
+  make_wire -3050 -530 -2790 -530
+  make_wire -3050 -930 -3050 -920
+  make_wire -3050 -920 -3050 -910
+  make_wire -3140 -1590 -3370 -1590
+  make_wire -3370 -1590 -3370 -1360
+  make_wire -3100 -1650 -3100 -1830
+  make_wire -3680 -1180 -3680 -860
+  make_wire -3100 -1830 -3880 -1830
+  make_wire -3520 -1360 -3440 -1360
+  make_wire -3440 -1360 -3370 -1360
+  make_wire -3370 -1360 -3280 -1360
+  make_wire -3280 -1360 -3230 -1360
+  make_wire -3620 -1430 -3620 -1100
+  make_wire -2790 -1100 -2790 -530
+  make_wire -2790 -530 -2790 -500
+  make_wire -3680 -1180 -3680 -1260
+  make_wire -3680 -1260 -2890 -1260
+  make_wire -2890 -1260 -2890 -1690
+  make_wire -2890 -1260 -2890 -1160
+  make_wire -3050 -920 -1910 -920
+  make_wire -2980 -1780 -2950 -1780
+  make_wire -2980 -1840 -2890 -1840
+  make_wire -2980 -1740 -2980 -1720
+  make_wire -2990 -1720 -2990 -1680
+  make_wire -2990 -1720 -2980 -1720
+  make_wire -2980 -1720 -2950 -1720
+  make_wire -3080 -1880 -3080 -1830
+  make_wire -3080 -1830 -3080 -1780
+  make_wire -2950 -1780 -2950 -1720
+  make_wire -2980 -1840 -2980 -1820
+}
+
+proc ICON_CMOS_HALF_SUBTRACTOR args {
+
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -20} -name A
+icon_term -type input -origin {-100 0} -name B
+icon_term -type output -origin {100 -20} -name Diff
+icon_term -type output -origin {100 0} -name Borrow
+icon_term -type inout -origin {100 40} -name a_Vdd
+icon_term -type inout -origin {100 60} -name a_Gnd
+icon_property -origin {-90 -20} -label A
+icon_property -origin {-90 0} -label B
+icon_property -origin {90 -20} -anchor e -label Diff
+icon_property -origin {90 0} -anchor e -label Borrow
+icon_property -origin {90 40} -anchor e -label a_Vdd
+icon_property -origin {90 60} -anchor e -label a_Gnd
+icon_property -origin {-90 -70} -label {$name}
+icon_property -origin {-90 -50} -label CMOS_HALF_SUBTRACTOR
+  icon_line -100 -60 100 -60 100 80 -100 80 -100 -60
+icon_property -origin {-90 90} -label {example_param=$example_param}
+  icon_property -origin {-90 150} -type user -name name -default x
+  icon_property -origin {-90 170} -type user -name example_param -default 1.0
+
+}
+

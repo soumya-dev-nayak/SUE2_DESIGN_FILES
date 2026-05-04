@@ -1,0 +1,32 @@
+proc SCHEMATIC_test_1X4_demux {} {
+make input -name Y -origin {-440 30}
+make input -name s1 -origin {-340 50}
+make input -name s0 -origin {-220 70}
+make output -name i0 -origin {100 30}
+make global -name gnd -origin {140 310}
+make global -name vdd -origin {190 210}
+make output -name i1 -origin {100 50}
+make output -name i2 -origin {100 70}
+make output -name i3 -origin {100 90}
+make DEMUX_1X4 -name xi0 -origin {0 70}
+make pulse -name V0 -pulse_voltage 1.3V -pulse_width 40ns -period 80ns -origin {-440 70}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 4ns -period 8ns -origin {-210 110}
+make pulse -name V2 -pulse_voltage 1.3V -origin {-320 90}
+  make_wire -100 50 -320 50
+  make_wire -100 70 -210 70
+  make_wire 100 150 140 150
+  make_wire 100 130 190 130
+  make_wire 190 130 190 210
+  make_wire 140 300 140 150
+  make_wire 140 300 140 310
+  make_wire -210 150 -210 300
+  make_wire -210 300 -320 300
+  make_wire -210 300 140 300
+  make_wire -440 30 -100 30
+  make_wire -320 50 -340 50
+  make_wire -210 70 -220 70
+  make_wire -440 110 -440 300
+  make_wire -440 300 -320 300
+  make_wire -320 130 -320 300
+}
+

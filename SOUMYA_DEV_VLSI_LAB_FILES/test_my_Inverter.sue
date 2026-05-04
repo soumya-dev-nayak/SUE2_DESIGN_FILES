@@ -1,0 +1,19 @@
+proc SCHEMATIC_test_my_Inverter {} {
+make my_Inverter -name xi0 -origin {850 390}
+make global -orient RXY -name Vdd -origin {990 410}
+make global -name Gnd -origin {990 540}
+make input -name I/P -origin {690 380}
+make output -name O/P -origin {1000 360}
+make pulse -name V0 -pulse_voltage 1.3V -origin {690 420}
+  make_wire 750 380 690 380
+  make_wire 990 410 990 420
+  make_wire 950 360 950 380
+  make_wire 950 360 1000 360
+  make_wire 950 440 990 440
+  make_wire 690 460 690 510
+  make_wire 690 510 990 510
+  make_wire 990 510 990 440
+  make_wire 990 510 990 540
+  make_wire 950 420 990 420
+}
+

@@ -1,0 +1,31 @@
+proc SCHEMATIC_test_OR_Gate {} {
+make CMOS_OR_GATE -name xi0 -origin {-10 130}
+make input -name A -origin {-180 100}
+make input -name B -origin {-180 160}
+make output -name Out -origin {170 100}
+make global -orient RXY -name Vdd -origin {120 140}
+make global -name Gnd -origin {130 310}
+make pulse -orient RXY -name V0 -pulse_voltage 1.3V -origin {-160 60}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 2ns -period 4ns -origin {-160 200}
+  make_wire -110 140 -110 160
+  make_wire -110 100 -110 120
+  make_wire -160 160 -110 160
+  make_wire -160 160 -180 160
+  make_wire -160 100 -180 100
+  make_wire -160 100 -110 100
+  make_wire -160 20 -270 20
+  make_wire -270 240 -160 240
+  make_wire 90 100 170 100
+  make_wire 90 100 90 120
+  make_wire 90 180 130 180
+  make_wire 120 160 120 140
+  make_wire 90 160 120 160
+  make_wire -270 200 -300 200
+  make_wire -300 200 -300 290
+  make_wire -300 290 130 290
+  make_wire 130 290 130 180
+  make_wire 130 290 130 310
+  make_wire -270 200 -270 20
+  make_wire -270 200 -270 240
+}
+

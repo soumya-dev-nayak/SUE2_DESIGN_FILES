@@ -1,0 +1,69 @@
+proc SCHEMATIC_CMOS_NOR_GATE_sue {} {
+make inout -name a_Vdd -origin {1070 450}
+make inout -name a_Gnd -origin {1040 1080}
+make input -name A -origin {870 730}
+make input -name B -origin {870 820}
+make pmos4 -name M0 -origin {1070 610}
+make nmos4 -name M1 -origin {1010 980}
+make pmos4 -name M2 -origin {1070 730}
+make nmos4 -name M3 -origin {1150 910}
+make output -name Y -origin {1310 790}
+  make_wire 1010 610 950 610
+  make_wire 950 730 870 730
+  make_wire 1070 570 1070 610
+  make_wire 1070 650 1070 690
+  make_wire 1010 940 1010 820
+  make_wire 1150 870 1150 820
+  make_wire 1010 730 970 730
+  make_wire 970 910 1090 910
+  make_wire 970 820 870 820
+  make_wire 950 730 950 610
+  make_wire 950 730 950 980
+  make_wire 970 730 970 820
+  make_wire 970 820 970 910
+  make_wire 1010 820 1070 820
+  make_wire 1070 820 1150 820
+  make_wire 1070 730 1130 730
+  make_wire 1130 730 1130 540
+  make_wire 1040 1040 1010 1040
+  make_wire 1040 1040 1150 1040
+  make_wire 1150 910 1150 950
+  make_wire 1070 790 1310 790
+  make_wire 1010 980 1040 980
+  make_wire 1010 1020 1010 1040
+  make_wire 1040 980 1040 1040
+  make_wire 1040 1040 1040 1080
+  make_wire 1070 540 1070 450
+  make_wire 1070 540 1070 570
+  make_wire 1070 540 1130 540
+  make_wire 1150 950 1150 1040
+  make_wire 1070 770 1070 790
+  make_wire 1070 790 1070 820
+}
+
+proc ICON_CMOS_NOR_GATE_sue args {
+
+
+
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -10} -name A
+icon_term -type input -origin {-100 10} -name B
+icon_term -type output -origin {100 -10} -name Y
+icon_term -type inout -origin {100 30} -name a_Vdd
+icon_term -type inout -origin {100 50} -name a_Gnd
+icon_property -origin {-90 -10} -label A
+icon_property -origin {-90 10} -label B
+icon_property -origin {90 -10} -anchor e -label Y
+icon_property -origin {90 30} -anchor e -label a_Vdd
+icon_property -origin {90 50} -anchor e -label a_Gnd
+icon_property -origin {-90 -60} -label {$name}
+icon_property -origin {-90 -40} -label CMOS_NOR_GATE_sue
+  icon_line -100 -50 100 -50 100 70 -100 70 -100 -50
+icon_property -origin {-90 80} -label {example_param=$example_param}
+  icon_property -origin {-90 140} -type user -name name -default x
+  icon_property -origin {-90 160} -type user -name example_param -default 1.0
+
+
+
+}
+

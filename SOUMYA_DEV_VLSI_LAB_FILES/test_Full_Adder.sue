@@ -1,0 +1,33 @@
+proc SCHEMATIC_test_Full_Adder {} {
+make CMOS_FULL_ADDER -name xi0 -origin {790 430}
+make input -name A -origin {410 390}
+make input -name B -origin {540 430}
+make input -name Cin -origin {640 460}
+make output -name Sout -origin {1000 380}
+make output -name Cout -origin {1000 430}
+make global -name Gnd -origin {930 680}
+make global -orient RXY -name Vdd -origin {940 460}
+make pulse -name V0 -origin {410 430}
+make pulse -name V1 -pulse_width 4ns -period 8ns -origin {540 470}
+make pulse -name V2 -pulse_width 5ns -period 10ns -origin {640 500}
+  make_wire 890 380 1000 380
+  make_wire 890 380 890 410
+  make_wire 890 430 1000 430
+  make_wire 940 470 940 460
+  make_wire 890 470 940 470
+  make_wire 690 390 410 390
+  make_wire 640 460 690 460
+  make_wire 690 450 690 460
+  make_wire 690 390 690 410
+  make_wire 540 430 690 430
+  make_wire 410 470 410 640
+  make_wire 930 680 930 640
+  make_wire 930 640 930 490
+  make_wire 930 490 890 490
+  make_wire 640 540 640 640
+  make_wire 640 640 930 640
+  make_wire 540 510 540 640
+  make_wire 540 640 640 640
+  make_wire 540 640 410 640
+}
+

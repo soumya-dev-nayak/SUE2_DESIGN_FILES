@@ -1,0 +1,35 @@
+proc SCHEMATIC_test_CMOS_HALF_ADDER {} {
+make output -name Sum -origin {300 10}
+make output -name Carry -origin {300 60}
+make global -orient RXY -name Vdd -origin {190 90}
+make global -name Gnd -origin {230 310}
+make input -name A -origin {-210 30}
+make input -name B -origin {-210 80}
+make cmos_HALF_ADDER -name xi0 -origin {20 60}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 4ns -period 8ns -origin {-170 120}
+make pulse -orient RXY -name V0 -pulse_voltage 1.3V -origin {-170 -10}
+  make_wire 120 10 300 10
+  make_wire 120 10 120 40
+  make_wire 120 60 300 60
+  make_wire 120 120 230 120
+  make_wire 190 100 190 90
+  make_wire 120 100 190 100
+  make_wire -80 30 -80 40
+  make_wire -80 60 -80 80
+  make_wire -170 80 -80 80
+  make_wire -170 80 -210 80
+  make_wire -170 30 -210 30
+  make_wire -170 30 -80 30
+  make_wire -170 -50 -170 -80
+  make_wire -170 -80 -300 -80
+  make_wire -300 200 -170 200
+  make_wire -170 200 -170 160
+  make_wire 230 280 -350 280
+  make_wire -350 280 -350 90
+  make_wire -350 90 -300 90
+  make_wire -300 90 -300 -80
+  make_wire -300 90 -300 200
+  make_wire 230 280 230 120
+  make_wire 230 280 230 310
+}
+

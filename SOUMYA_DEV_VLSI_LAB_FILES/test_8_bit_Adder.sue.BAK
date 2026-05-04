@@ -1,0 +1,112 @@
+proc SCHEMATIC_test_8_bit_Adder {} {
+make global -name vdd -origin {210 150}
+make _8_BIT_ADDER -name xi0 -origin {10 50}
+make pulse -name V0 -origin {-130 260}
+make pulse -name V1 -origin {-210 240}
+make pulse -name V2 -origin {-290 220}
+make pulse -name V3 -origin {-370 200}
+make pulse -name V4 -origin {-440 180}
+make pulse -name V5 -origin {-520 160}
+make pulse -name V6 -origin {-620 140}
+make pulse -name V7 -origin {-730 120}
+make pulse -orient RXY -name V8 -origin {-660 0}
+make pulse -orient RXY -name V9 -origin {-590 -20}
+make pulse -orient RXY -name V10 -origin {-520 -40}
+make pulse -orient RXY -name V11 -origin {-450 -60}
+make pulse -orient RXY -name V12 -origin {-380 -80}
+make pulse -orient RXY -name V14 -origin {-210 -120}
+make pulse -orient RXY -name V15 -origin {-140 -140}
+make pulse -name V16 -origin {-740 20}
+make global -name gnd -origin {160 390}
+make output -name s0 -origin {110 -100}
+make output -name s1 -origin {110 -80}
+make output -name s2 -origin {110 -60}
+make output -name s3 -origin {110 -40}
+make output -name s4 -origin {110 -20}
+make output -name s5 -origin {110 0}
+make output -name s6 -origin {110 20}
+make output -name s7 -origin {110 40}
+make output -name cout -origin {110 60}
+make input -name a0 -origin {-140 -100}
+make input -name b0 -origin {-210 -80}
+make input -name cin -origin {-310 -60}
+make input -name a1 -origin {-380 -40}
+make input -name b1 -origin {-450 -20}
+make input -name a2 -origin {-520 0}
+make input -name b2 -origin {-590 20}
+make input -name a3 -origin {-660 40}
+make input -name b3 -origin {-740 60}
+make input -name a4 -origin {-740 80}
+make input -name b4 -origin {-650 100}
+make input -name a5 -origin {-530 120}
+make input -name b5 -origin {-440 140}
+make input -name a6 -origin {-370 160}
+make input -name b6 -origin {-290 180}
+make input -name a7 -origin {-210 200}
+make input -name b7 -origin {-130 220}
+make pulse -orient RXY -name V13 -pulse_voltage 0V -origin {-310 -100}
+  make_wire 210 100 210 150
+  make_wire -90 -100 -140 -100
+  make_wire -90 -80 -210 -80
+  make_wire -90 -60 -310 -60
+  make_wire -90 -40 -380 -40
+  make_wire -90 -20 -450 -20
+  make_wire -90 0 -520 0
+  make_wire -90 20 -590 20
+  make_wire -90 40 -660 40
+  make_wire -90 60 -740 60
+  make_wire -90 120 -520 120
+  make_wire -90 160 -370 160
+  make_wire -90 180 -290 180
+  make_wire -90 200 -210 200
+  make_wire -90 220 -130 220
+  make_wire 110 120 160 120
+  make_wire 110 100 210 100
+  make_wire 160 370 160 120
+  make_wire 160 370 160 390
+  make_wire -130 300 -130 370
+  make_wire -130 370 160 370
+  make_wire -210 280 -210 370
+  make_wire -210 370 -130 370
+  make_wire -140 -280 -140 -180
+  make_wire -210 -160 -210 -280
+  make_wire -210 -280 -140 -280
+  make_wire -310 -140 -310 -280
+  make_wire -310 -280 -210 -280
+  make_wire -380 -120 -380 -280
+  make_wire -380 -280 -310 -280
+  make_wire -450 -100 -450 -280
+  make_wire -450 -280 -380 -280
+  make_wire -520 -80 -520 -280
+  make_wire -520 -280 -450 -280
+  make_wire -590 -60 -590 -280
+  make_wire -590 -280 -520 -280
+  make_wire -660 -40 -660 -280
+  make_wire -660 -280 -590 -280
+  make_wire -660 -280 -740 -280
+  make_wire -620 180 -620 370
+  make_wire -520 200 -520 370
+  make_wire -440 220 -440 370
+  make_wire -370 240 -370 370
+  make_wire -290 260 -290 370
+  make_wire -290 370 -370 370
+  make_wire -290 370 -210 370
+  make_wire -740 80 -730 80
+  make_wire -730 80 -90 80
+  make_wire -730 370 -620 370
+  make_wire -520 370 -620 370
+  make_wire -650 100 -620 100
+  make_wire -620 100 -90 100
+  make_wire -520 120 -530 120
+  make_wire -740 -50 -900 -50
+  make_wire -900 -50 -900 230
+  make_wire -900 230 -730 230
+  make_wire -730 230 -730 160
+  make_wire -730 230 -730 370
+  make_wire -740 -50 -740 -280
+  make_wire -740 -50 -740 -20
+  make_wire -440 140 -90 140
+  make_wire -440 370 -520 370
+  make_wire -440 370 -370 370
+}
+

@@ -1,0 +1,29 @@
+proc SCHEMATIC_test_FA_4X1_MUX {} {
+make input -name c -origin {50 -40}
+make input -name b -origin {180 -20}
+make input -name a -origin {290 0}
+make global -name gnd -origin {650 260}
+make global -name vdd -origin {580 100}
+make output -name sum -origin {560 -40}
+make output -name carry -origin {560 -20}
+make FA_by_MUX_4X1 -name xi0 -origin {460 -20}
+make pulse -name V0 -pulse_voltage 1.3V -origin {80 0}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 4ns -period 8ns -origin {180 20}
+make pulse -name V2 -pulse_voltage 1.3V -pulse_width 5ns -period 10ns -origin {290 40}
+  make_wire 560 40 580 40
+  make_wire 580 40 580 100
+  make_wire 560 20 650 20
+  make_wire 80 -40 360 -40
+  make_wire 80 -40 50 -40
+  make_wire 290 0 360 0
+  make_wire 80 40 80 240
+  make_wire 650 240 650 20
+  make_wire 650 240 650 260
+  make_wire 290 80 290 240
+  make_wire 290 240 650 240
+  make_wire 180 60 180 240
+  make_wire 80 240 180 240
+  make_wire 290 240 180 240
+  make_wire 180 -20 360 -20
+}
+

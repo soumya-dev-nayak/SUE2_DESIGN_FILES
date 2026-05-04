@@ -1,0 +1,50 @@
+proc SCHEMATIC_test_Boolean_Function {} {
+make First_Boolean_Function -name xi0 -origin {10 80}
+make global -name vdd -origin {140 110}
+make global -name gnd -origin {180 310}
+make input -name a -origin {-150 30}
+make input -name b -origin {-220 50}
+make input -name g -origin {-310 70}
+make input -name c -origin {-430 90}
+make input -name d -origin {-310 110}
+make input -name e -origin {-220 130}
+make input -name f -origin {-150 150}
+make output -name y -origin {110 30}
+make pulse -orient RXY -name V0 -pulse_voltage 1.3V -origin {-150 -10}
+make pulse -orient RXY -name V1 -pulse_voltage 1.3V -pulse_width 4ns -period 8ns -origin {-220 10}
+make pulse -orient RXY -name V2 -pulse_voltage 1.3V -pulse_width 5ns -period 10ns -origin {-310 30}
+make pulse -name V3 -pulse_voltage 1.3V -pulse_width 6ns -period 12ns -origin {-430 130}
+make pulse -name V4 -pulse_voltage 1.3V -pulse_width 8ns -period 16ns -origin {-310 150}
+make pulse -name V5 -pulse_voltage 1.3V -pulse_width 9ns -period 18ns -origin {-220 170}
+make pulse -name V6 -pulse_voltage 1.3V -pulse_width 10ns -period 20ns -origin {-140 190}
+  make_wire 140 90 140 110
+  make_wire 110 90 140 90
+  make_wire -90 90 -430 90
+  make_wire -90 70 -310 70
+  make_wire -90 50 -220 50
+  make_wire -90 30 -150 30
+  make_wire -90 110 -310 110
+  make_wire -90 130 -220 130
+  make_wire -150 150 -140 150
+  make_wire -140 150 -90 150
+  make_wire 110 70 180 70
+  make_wire -430 170 -430 290
+  make_wire 180 290 180 70
+  make_wire 180 290 180 310
+  make_wire -140 230 -140 290
+  make_wire -140 290 180 290
+  make_wire -220 210 -220 290
+  make_wire -220 290 -140 290
+  make_wire -310 190 -310 290
+  make_wire -310 290 -220 290
+  make_wire -310 290 -430 290
+  make_wire -310 -10 -310 -70
+  make_wire -310 -70 -510 -70
+  make_wire -510 -70 -510 290
+  make_wire -510 290 -430 290
+  make_wire -310 -70 -220 -70
+  make_wire -220 -70 -220 -30
+  make_wire -220 -70 -150 -70
+  make_wire -150 -70 -150 -50
+}
+

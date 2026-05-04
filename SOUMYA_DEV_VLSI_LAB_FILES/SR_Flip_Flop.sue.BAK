@@ -1,0 +1,140 @@
+proc SCHEMATIC_SR_Flip_Flop {} {
+make input -name R -origin {-1020 -100}
+make pmos4 -name M0 -origin {-920 -430}
+make pmos4 -orient RXY -name M1 -origin {-760 -430}
+make pmos4 -orient RXY -name M2 -origin {-840 -270}
+make nmos4 -name M3 -origin {-920 -100}
+make nmos4 -name M4 -origin {-920 50}
+make nmos4 -orient RXY -name M5 -origin {-800 -40}
+make input -orient RX -name S -origin {-320 -100}
+make inout -name a_Gnd -origin {-640 240}
+make input -orient R90 -name CLK -origin {-670 -450}
+make inout -name a_Vdd -origin {-720 -580}
+make pmos4 -orient RX -name M6 -origin {-420 -430}
+make pmos4 -orient RY -name M7 -origin {-580 -430}
+make pmos4 -orient RY -name M8 -origin {-500 -270}
+make nmos4 -orient RX -name M9 -origin {-420 -100}
+make nmos4 -orient RX -name M10 -origin {-420 50}
+make nmos4 -orient RY -name M11 -origin {-540 -40}
+make output -name ~Q -origin {-270 -220}
+make output -name Q -origin {-270 -170}
+  make_wire -920 -470 -920 -510
+  make_wire -920 -510 -760 -510
+  make_wire -760 -510 -760 -470
+  make_wire -920 -430 -890 -430
+  make_wire -890 -430 -890 -470
+  make_wire -890 -470 -920 -470
+  make_wire -760 -430 -780 -430
+  make_wire -780 -430 -780 -470
+  make_wire -780 -470 -760 -470
+  make_wire -890 -430 -890 -270
+  make_wire -890 -270 -840 -270
+  make_wire -840 -310 -840 -390
+  make_wire -840 -390 -920 -390
+  make_wire -840 -390 -760 -390
+  make_wire -920 -60 -920 10
+  make_wire -920 90 -920 140
+  make_wire -800 140 -800 0
+  make_wire -800 -140 -800 -80
+  make_wire -840 -140 -920 -140
+  make_wire -840 -140 -800 -140
+  make_wire -780 -270 -720 -270
+  make_wire -720 -40 -740 -40
+  make_wire -800 -40 -830 -40
+  make_wire -830 -40 -830 0
+  make_wire -830 0 -800 0
+  make_wire -920 50 -890 50
+  make_wire -890 50 -890 90
+  make_wire -890 90 -920 90
+  make_wire -920 -100 -890 -100
+  make_wire -890 -100 -890 50
+  make_wire -980 -430 -1020 -430
+  make_wire -1020 -100 -980 -100
+  make_wire -1020 -430 -1020 -100
+  make_wire -420 -470 -420 -510
+  make_wire -420 -510 -580 -510
+  make_wire -580 -510 -580 -470
+  make_wire -420 -430 -450 -430
+  make_wire -450 -430 -450 -470
+  make_wire -450 -470 -420 -470
+  make_wire -580 -430 -560 -430
+  make_wire -560 -430 -560 -470
+  make_wire -560 -470 -580 -470
+  make_wire -450 -430 -450 -270
+  make_wire -450 -270 -500 -270
+  make_wire -500 -310 -500 -390
+  make_wire -500 -390 -420 -390
+  make_wire -500 -390 -580 -390
+  make_wire -420 -60 -420 10
+  make_wire -420 90 -420 140
+  make_wire -420 140 -540 140
+  make_wire -540 140 -540 0
+  make_wire -500 -140 -420 -140
+  make_wire -500 -140 -540 -140
+  make_wire -560 -270 -620 -270
+  make_wire -620 -40 -600 -40
+  make_wire -540 -40 -510 -40
+  make_wire -510 -40 -510 0
+  make_wire -510 0 -540 0
+  make_wire -420 50 -450 50
+  make_wire -450 50 -450 90
+  make_wire -450 90 -420 90
+  make_wire -420 -100 -450 -100
+  make_wire -450 -100 -450 50
+  make_wire -360 -430 -320 -430
+  make_wire -320 -100 -360 -100
+  make_wire -320 -430 -320 -100
+  make_wire -800 140 -920 140
+  make_wire -640 140 -640 240
+  make_wire -640 140 -800 140
+  make_wire -640 140 -540 140
+  make_wire -670 -430 -700 -430
+  make_wire -670 -430 -640 -430
+  make_wire -670 -450 -670 -430
+  make_wire -670 -430 -670 20
+  make_wire -670 20 -980 20
+  make_wire -980 20 -980 50
+  make_wire -670 20 -360 20
+  make_wire -360 20 -360 50
+  make_wire -500 -220 -720 -220
+  make_wire -720 -220 -720 -270
+  make_wire -720 -220 -720 -40
+  make_wire -840 -170 -620 -170
+  make_wire -840 -170 -840 -230
+  make_wire -840 -170 -840 -140
+  make_wire -500 -220 -270 -220
+  make_wire -620 -170 -270 -170
+  make_wire -500 -220 -500 -140
+  make_wire -720 -580 -720 -510
+  make_wire -720 -510 -760 -510
+  make_wire -720 -510 -580 -510
+  make_wire -500 -230 -500 -220
+  make_wire -540 -140 -540 -80
+  make_wire -620 -270 -620 -170
+  make_wire -620 -170 -620 -40
+}
+
+proc ICON_SR_Flip_Flop args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -20} -name R
+icon_term -type input -origin {-100 0} -name S
+icon_term -type input -origin {-100 20} -name CLK
+icon_term -type output -origin {100 -20} -name Q
+icon_term -type output -origin {100 0} -name ~Q
+icon_term -type inout -origin {100 40} -name a_Gnd
+icon_term -type inout -origin {100 60} -name a_Vdd
+icon_property -origin {-90 -20} -label R
+icon_property -origin {-90 0} -label S
+icon_property -origin {-90 20} -label CLK
+icon_property -origin {90 -20} -anchor e -label Q
+icon_property -origin {90 0} -anchor e -label ~Q
+icon_property -origin {90 40} -anchor e -label a_Gnd
+icon_property -origin {90 60} -anchor e -label a_Vdd
+icon_property -origin {-90 -70} -label {$name}
+icon_property -origin {-90 -50} -label SR_Flip_Flop
+  icon_line -100 -60 100 -60 100 80 -100 80 -100 -60
+icon_property -origin {-90 90} -label {example_param=$example_param}
+  icon_property -origin {-90 150} -type user -name name -default x
+  icon_property -origin {-90 170} -type user -name example_param -default 1.0
+}
+

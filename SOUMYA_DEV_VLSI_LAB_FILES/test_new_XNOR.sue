@@ -1,0 +1,30 @@
+proc SCHEMATIC_test_new_XNOR {} {
+make global -name Gnd -origin {150 560}
+make global -name Vdd -origin {210 470}
+make output -name Out -origin {220 360}
+make input -name A -origin {-180 350}
+make input -name B -origin {-180 400}
+make CMOS_XNOR -name xi0 -origin {20 370}
+make pulse -orient RXY -name V0 -origin {-150 310}
+make pulse -name V1 -pulse_width 2ns -period 4ns -origin {-150 440}
+  make_wire 120 420 150 420
+  make_wire 120 400 210 400
+  make_wire 210 400 210 470
+  make_wire 120 360 220 360
+  make_wire -80 380 -80 400
+  make_wire -80 350 -80 360
+  make_wire -150 400 -80 400
+  make_wire -150 400 -180 400
+  make_wire -150 350 -180 350
+  make_wire -150 350 -80 350
+  make_wire -150 270 -260 270
+  make_wire -260 480 -150 480
+  make_wire -260 400 -300 400
+  make_wire -300 400 -300 540
+  make_wire -300 540 150 540
+  make_wire 150 540 150 420
+  make_wire 150 540 150 560
+  make_wire -260 400 -260 270
+  make_wire -260 400 -260 480
+}
+

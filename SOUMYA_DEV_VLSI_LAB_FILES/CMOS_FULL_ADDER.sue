@@ -1,0 +1,479 @@
+proc SCHEMATIC_CMOS_FULL_ADDER {} {
+make inout -name a_Vdd -origin {-8170 -9680}
+make inout -name a_Gnd -origin {-8780 -7750}
+make input -name A -origin {-9870 -9360}
+make input -name B -origin {-9880 -8970}
+make pmos4 -name M0 -origin {-8730 -9410}
+make pmos4 -orient RXY -name M1 -origin {-8570 -9230}
+make pmos4 -name M2 -origin {-8730 -9230}
+make nmos4 -orient RXY -name M3 -origin {-8570 -9010}
+make nmos4 -orient RXY -name M4 -origin {-8570 -8880}
+make pmos4 -orient RXY -name M5 -origin {-8570 -9410}
+make pmos4 -name M6 -origin {-8970 -9420}
+make nmos4 -name M7 -origin {-8980 -9320}
+make pmos4 -name M8 -origin {-8950 -9020}
+make nmos4 -name M9 -origin {-8960 -8910}
+make nmos4 -name M10 -origin {-8730 -9010}
+make nmos4 -name M11 -origin {-8730 -8880}
+make pmos4 -name M12 -origin {-9510 -8820}
+make pmos4 -name M13 -origin {-9270 -8740}
+make nmos4 -name M14 -origin {-9380 -8500}
+make nmos4 -name M15 -origin {-9380 -8330}
+make pmos4 -name M16 -origin {-9040 -8610}
+make nmos4 -name M17 -origin {-9040 -8510}
+make pmos4 -name M18 -origin {-7530 -9410}
+make pmos4 -orient RXY -name M19 -origin {-7370 -9230}
+make pmos4 -name M20 -origin {-7530 -9230}
+make nmos4 -orient RXY -name M21 -origin {-7370 -9010}
+make nmos4 -orient RXY -name M22 -origin {-7370 -8880}
+make pmos4 -orient RXY -name M23 -origin {-7370 -9410}
+make pmos4 -name M24 -origin {-7770 -9420}
+make nmos4 -name M25 -origin {-7770 -9320}
+make pmos4 -name M26 -origin {-7750 -9020}
+make nmos4 -name M27 -origin {-7760 -8910}
+make nmos4 -name M28 -origin {-7530 -9010}
+make nmos4 -name M29 -origin {-7530 -8880}
+make input -name Cin -origin {-8230 -8970}
+make output -name Sout -origin {-6860 -9110}
+make pmos4 -name M30 -origin {-8070 -8490}
+make nmos4 -name M31 -origin {-8040 -8160}
+make nmos4 -name M32 -origin {-8040 -8040}
+make pmos4 -name M33 -origin {-7820 -8280}
+make nmos4 -name M34 -origin {-7820 -8180}
+make pmos4 -name M35 -origin {-7940 -8430}
+make pmos4 -name M36 -origin {-7400 -8470}
+make nmos4 -name M37 -origin {-7460 -8100}
+make pmos4 -name M38 -origin {-7400 -8350}
+make nmos4 -name M39 -origin {-7320 -8170}
+make pmos4 -name M40 -origin {-7090 -8340}
+make nmos4 -name M41 -origin {-7090 -8240}
+make output -name Cout -origin {-6760 -8290}
+  make_wire -8570 -9320 -8570 -9270
+  make_wire -8730 -9190 -8730 -9160
+  make_wire -8570 -9160 -8570 -9190
+  make_wire -8730 -9050 -8730 -9080
+  make_wire -8570 -9080 -8570 -9050
+  make_wire -8570 -9370 -8570 -9320
+  make_wire -9090 -9370 -9070 -9370
+  make_wire -9060 -8910 -9020 -8910
+  make_wire -9110 -8970 -9060 -8970
+  make_wire -9010 -9020 -9060 -9020
+  make_wire -9030 -9420 -9070 -9420
+  make_wire -9030 -9420 -9020 -9420
+  make_wire -8850 -9190 -9090 -9190
+  make_wire -8450 -9410 -8510 -9410
+  make_wire -8980 -9220 -9160 -9220
+  make_wire -9160 -9220 -9160 -8840
+  make_wire -9130 -9130 -8950 -9130
+  make_wire -8940 -9420 -8940 -9470
+  make_wire -8950 -9020 -8910 -9020
+  make_wire -8910 -9020 -8910 -9100
+  make_wire -8910 -9100 -8950 -9100
+  make_wire -8950 -9100 -8950 -9130
+  make_wire -8970 -9420 -8940 -9420
+  make_wire -8940 -9470 -8970 -9470
+  make_wire -8730 -8770 -8640 -8770
+  make_wire -8640 -8770 -8570 -8770
+  make_wire -8840 -8750 -8490 -8750
+  make_wire -8650 -9410 -8570 -9410
+  make_wire -9040 -9320 -9070 -9320
+  make_wire -8940 -9260 -8980 -9260
+  make_wire -8650 -9410 -8730 -9410
+  make_wire -8940 -9320 -8940 -9260
+  make_wire -8650 -9230 -8730 -9230
+  make_wire -8650 -9230 -8570 -9230
+  make_wire -8650 -9410 -8650 -9580
+  make_wire -8950 -9100 -8950 -9060
+  make_wire -8570 -9580 -8570 -9450
+  make_wire -8730 -9580 -8730 -9450
+  make_wire -8930 -8910 -8930 -8840
+  make_wire -8570 -9320 -8730 -9320
+  make_wire -8980 -9380 -8980 -9360
+  make_wire -8850 -9410 -8790 -9410
+  make_wire -8960 -8970 -8960 -8950
+  make_wire -8790 -9010 -8850 -9010
+  make_wire -8800 -8880 -8800 -8730
+  make_wire -8450 -9490 -8450 -9410
+  make_wire -9190 -9490 -8450 -9490
+  make_wire -8440 -8700 -8880 -8700
+  make_wire -8440 -9010 -8510 -9010
+  make_wire -8730 -9370 -8730 -9320
+  make_wire -8730 -9320 -8730 -9270
+  make_wire -8650 -9410 -8650 -9230
+  make_wire -8730 -9160 -8650 -9160
+  make_wire -8650 -9160 -8570 -9160
+  make_wire -8790 -9230 -8880 -9230
+  make_wire -8880 -9380 -8880 -9230
+  make_wire -8880 -9230 -8880 -8700
+  make_wire -8440 -9010 -8440 -8700
+  make_wire -8640 -9010 -8640 -8880
+  make_wire -8570 -8970 -8570 -8920
+  make_wire -8510 -9230 -8490 -9230
+  make_wire -8570 -8880 -8640 -8880
+  make_wire -8570 -9010 -8640 -9010
+  make_wire -8960 -8910 -8930 -8910
+  make_wire -8960 -8970 -8950 -8970
+  make_wire -8950 -8970 -8840 -8970
+  make_wire -9060 -9020 -9060 -8970
+  make_wire -9060 -8970 -9060 -8910
+  make_wire -8570 -8840 -8570 -8770
+  make_wire -8730 -9010 -8640 -9010
+  make_wire -8850 -9410 -8850 -9190
+  make_wire -8850 -9190 -8850 -9010
+  make_wire -8730 -9080 -8650 -9080
+  make_wire -8650 -9080 -8570 -9080
+  make_wire -9110 -8730 -8800 -8730
+  make_wire -8730 -8840 -8730 -8770
+  make_wire -8730 -8970 -8730 -8920
+  make_wire -8730 -8880 -8640 -8880
+  make_wire -8950 -8980 -8950 -8970
+  make_wire -8790 -8880 -8800 -8880
+  make_wire -9110 -8970 -9110 -8730
+  make_wire -9510 -8860 -9510 -8900
+  make_wire -9510 -8820 -9430 -8820
+  make_wire -9430 -8820 -9430 -8900
+  make_wire -9430 -8900 -9510 -8900
+  make_wire -9270 -8900 -9220 -8900
+  make_wire -9220 -8740 -9270 -8740
+  make_wire -9510 -8780 -9510 -8660
+  make_wire -9270 -8660 -9270 -8700
+  make_wire -8960 -8870 -8960 -8840
+  make_wire -8960 -8840 -8960 -8640
+  make_wire -8960 -8840 -9160 -8840
+  make_wire -8960 -8840 -8930 -8840
+  make_wire -8640 -8880 -8640 -8770
+  make_wire -8640 -8770 -8640 -8640
+  make_wire -9190 -8970 -9190 -9490
+  make_wire -9190 -8970 -9110 -8970
+  make_wire -8510 -8880 -8490 -8880
+  make_wire -8840 -8970 -8840 -8750
+  make_wire -8490 -9230 -8490 -8880
+  make_wire -8490 -8880 -8490 -8750
+  make_wire -9670 -8820 -9570 -8820
+  make_wire -9670 -9360 -9870 -9360
+  make_wire -9670 -9360 -9090 -9360
+  make_wire -9130 -9130 -9130 -9580
+  make_wire -9380 -8460 -9380 -8370
+  make_wire -9130 -9580 -8970 -9580
+  make_wire -8960 -8640 -8780 -8640
+  make_wire -8640 -8640 -8780 -8640
+  make_wire -9380 -8330 -9170 -8330
+  make_wire -9170 -8260 -9380 -8260
+  make_wire -9380 -8500 -9170 -8500
+  make_wire -9670 -8500 -9440 -8500
+  make_wire -9670 -8820 -9670 -8500
+  make_wire -9270 -8900 -9270 -8780
+  make_wire -9510 -8660 -9380 -8660
+  make_wire -9380 -8660 -9270 -8660
+  make_wire -9570 -8330 -9440 -8330
+  make_wire -9610 -8970 -9610 -8740
+  make_wire -9610 -8740 -9570 -8740
+  make_wire -9570 -8740 -9330 -8740
+  make_wire -9570 -8740 -9570 -8330
+  make_wire -9610 -8970 -9880 -8970
+  make_wire -9610 -8970 -9190 -8970
+  make_wire -9100 -8610 -9150 -8610
+  make_wire -9150 -8510 -9100 -8510
+  make_wire -9040 -8610 -8990 -8610
+  make_wire -8990 -8510 -8990 -8470
+  make_wire -9150 -8610 -9150 -8560
+  make_wire -9150 -8560 -9150 -8510
+  make_wire -9040 -8510 -8990 -8510
+  make_wire -9040 -8470 -8990 -8470
+  make_wire -8990 -8650 -8990 -8610
+  make_wire -9040 -8650 -8990 -8650
+  make_wire -9040 -8700 -9040 -8650
+  make_wire -9380 -8560 -9150 -8560
+  make_wire -9380 -8560 -9380 -8660
+  make_wire -9380 -8560 -9380 -8540
+  make_wire -9220 -8700 -9040 -8700
+  make_wire -9220 -8740 -9220 -8900
+  make_wire -9220 -8740 -9220 -8700
+  make_wire -9040 -8260 -9170 -8260
+  make_wire -9040 -8260 -8780 -8260
+  make_wire -9130 -9130 -9360 -9130
+  make_wire -9360 -9130 -9360 -8900
+  make_wire -9360 -8900 -9270 -8900
+  make_wire -9360 -8900 -9430 -8900
+  make_wire -8970 -9580 -8970 -9470
+  make_wire -8970 -9470 -8970 -9460
+  make_wire -9090 -9370 -9090 -9360
+  make_wire -9090 -9360 -9090 -9190
+  make_wire -9670 -9360 -9670 -8820
+  make_wire -8980 -9320 -8940 -9320
+  make_wire -8980 -9280 -8980 -9260
+  make_wire -8980 -9260 -8980 -9220
+  make_wire -8980 -9380 -8970 -9380
+  make_wire -8970 -9380 -8880 -9380
+  make_wire -9070 -9420 -9070 -9370
+  make_wire -9070 -9370 -9070 -9320
+  make_wire -8680 -8560 -8680 -8370
+  make_wire -7370 -9320 -7370 -9270
+  make_wire -7530 -9190 -7530 -9160
+  make_wire -7370 -9160 -7370 -9190
+  make_wire -7530 -9050 -7530 -9080
+  make_wire -7370 -9080 -7370 -9050
+  make_wire -7370 -9370 -7370 -9320
+  make_wire -7890 -9370 -7870 -9370
+  make_wire -7860 -8910 -7820 -8910
+  make_wire -7910 -8970 -7860 -8970
+  make_wire -7810 -9020 -7860 -9020
+  make_wire -7830 -9420 -7870 -9420
+  make_wire -7830 -9420 -7820 -9420
+  make_wire -7770 -9580 -7930 -9580
+  make_wire -7650 -9190 -7890 -9190
+  make_wire -7250 -9410 -7310 -9410
+  make_wire -7450 -9110 -6860 -9110
+  make_wire -7780 -9220 -7960 -9220
+  make_wire -7960 -9220 -7960 -8840
+  make_wire -7930 -9130 -7750 -9130
+  make_wire -7740 -9420 -7740 -9470
+  make_wire -7450 -9580 -7530 -9580
+  make_wire -7450 -9580 -7370 -9580
+  make_wire -7750 -9020 -7710 -9020
+  make_wire -7710 -9020 -7710 -9100
+  make_wire -7710 -9100 -7750 -9100
+  make_wire -7750 -9100 -7750 -9130
+  make_wire -7780 -9260 -7780 -9220
+  make_wire -7770 -9420 -7740 -9420
+  make_wire -7740 -9470 -7770 -9470
+  make_wire -7770 -9470 -7770 -9580
+  make_wire -7530 -8770 -7440 -8770
+  make_wire -7440 -8770 -7370 -8770
+  make_wire -7640 -8750 -7310 -8750
+  make_wire -7450 -9410 -7370 -9410
+  make_wire -7830 -9320 -7870 -9320
+  make_wire -7870 -9420 -7870 -9370
+  make_wire -7870 -9370 -7870 -9320
+  make_wire -7740 -9260 -7780 -9260
+  make_wire -7450 -9410 -7530 -9410
+  make_wire -7780 -9280 -7780 -9260
+  make_wire -7740 -9320 -7740 -9260
+  make_wire -7450 -9230 -7530 -9230
+  make_wire -7450 -9230 -7370 -9230
+  make_wire -7450 -9410 -7450 -9580
+  make_wire -7750 -9100 -7750 -9060
+  make_wire -7770 -9470 -7770 -9460
+  make_wire -7370 -9580 -7370 -9450
+  make_wire -7530 -9580 -7530 -9450
+  make_wire -7730 -8910 -7730 -8840
+  make_wire -7760 -8840 -7960 -8840
+  make_wire -7760 -8840 -7730 -8840
+  make_wire -7370 -9320 -7530 -9320
+  make_wire -7770 -9380 -7770 -9360
+  make_wire -7890 -9370 -7890 -9190
+  make_wire -7650 -9410 -7590 -9410
+  make_wire -7640 -8970 -7640 -8750
+  make_wire -7760 -8970 -7760 -8950
+  make_wire -7590 -9010 -7650 -9010
+  make_wire -7600 -8880 -7600 -8730
+  make_wire -7250 -9490 -7250 -9410
+  make_wire -7990 -9490 -7250 -9490
+  make_wire -7990 -8970 -7910 -8970
+  make_wire -7240 -8700 -7680 -8700
+  make_wire -7680 -9380 -7770 -9380
+  make_wire -7240 -9010 -7310 -9010
+  make_wire -7530 -9370 -7530 -9320
+  make_wire -7530 -9320 -7530 -9270
+  make_wire -7450 -9410 -7450 -9230
+  make_wire -7530 -9160 -7450 -9160
+  make_wire -7450 -9160 -7370 -9160
+  make_wire -7590 -9230 -7680 -9230
+  make_wire -7680 -9380 -7680 -9230
+  make_wire -7680 -9230 -7680 -8700
+  make_wire -7240 -9010 -7240 -8700
+  make_wire -7440 -9010 -7440 -8880
+  make_wire -7370 -8970 -7370 -8920
+  make_wire -7310 -9230 -7290 -9230
+  make_wire -7290 -9230 -7290 -8880
+  make_wire -7290 -8880 -7310 -8880
+  make_wire -7770 -9280 -7780 -9280
+  make_wire -7770 -9320 -7740 -9320
+  make_wire -7780 -9320 -7770 -9320
+  make_wire -7370 -8880 -7440 -8880
+  make_wire -7370 -9010 -7440 -9010
+  make_wire -7760 -8910 -7730 -8910
+  make_wire -7760 -8970 -7750 -8970
+  make_wire -7750 -8970 -7640 -8970
+  make_wire -7860 -9020 -7860 -8970
+  make_wire -7860 -8970 -7860 -8910
+  make_wire -7370 -8840 -7370 -8770
+  make_wire -7530 -9010 -7440 -9010
+  make_wire -7650 -9410 -7650 -9190
+  make_wire -7650 -9190 -7650 -9010
+  make_wire -7530 -9080 -7450 -9080
+  make_wire -7450 -9080 -7370 -9080
+  make_wire -7910 -8730 -7600 -8730
+  make_wire -7530 -8840 -7530 -8770
+  make_wire -7530 -8970 -7530 -8920
+  make_wire -7530 -8880 -7440 -8880
+  make_wire -7310 -8880 -7310 -8750
+  make_wire -7750 -8980 -7750 -8970
+  make_wire -7590 -8880 -7600 -8880
+  make_wire -7910 -8970 -7910 -8730
+  make_wire -8190 -9120 -8190 -9370
+  make_wire -8190 -9370 -7890 -9370
+  make_wire -8650 -9120 -8650 -9080
+  make_wire -8650 -9120 -8650 -9160
+  make_wire -7990 -9490 -7990 -8970
+  make_wire -7530 -9580 -7770 -9580
+  make_wire -8730 -9580 -8970 -9580
+  make_wire -8730 -9580 -8650 -9580
+  make_wire -8650 -9580 -8570 -9580
+  make_wire -8570 -9580 -8170 -9580
+  make_wire -8170 -9580 -7930 -9580
+  make_wire -8170 -9680 -8170 -9580
+  make_wire -7440 -8640 -7760 -8640
+  make_wire -7760 -8870 -7760 -8840
+  make_wire -8640 -8640 -7760 -8640
+  make_wire -9040 -8570 -9040 -8560
+  make_wire -9040 -8560 -9040 -8550
+  make_wire -8000 -8490 -8070 -8490
+  make_wire -8130 -8160 -8100 -8160
+  make_wire -8040 -8160 -7950 -8160
+  make_wire -8040 -8120 -8040 -8080
+  make_wire -8040 -8040 -7950 -8040
+  make_wire -7880 -8280 -7930 -8280
+  make_wire -7930 -8180 -7880 -8180
+  make_wire -7820 -8280 -7770 -8280
+  make_wire -7770 -8180 -7770 -8140
+  make_wire -7930 -8280 -7930 -8230
+  make_wire -7930 -8230 -7930 -8180
+  make_wire -7820 -8180 -7770 -8180
+  make_wire -7820 -8140 -7770 -8140
+  make_wire -7770 -8320 -7770 -8280
+  make_wire -7820 -8320 -7770 -8320
+  make_wire -7930 -8230 -8040 -8230
+  make_wire -7820 -8490 -7820 -8320
+  make_wire -8040 -7970 -7950 -7970
+  make_wire -7820 -7970 -7950 -7970
+  make_wire -7940 -8390 -7940 -8280
+  make_wire -8000 -8610 -7940 -8610
+  make_wire -8130 -8160 -8130 -8490
+  make_wire -8130 -8490 -8190 -8490
+  make_wire -8070 -8280 -8070 -8450
+  make_wire -8070 -8280 -8040 -8280
+  make_wire -8040 -8280 -7940 -8280
+  make_wire -7940 -8490 -7940 -8470
+  make_wire -8040 -8280 -8040 -8230
+  make_wire -8040 -8230 -8040 -8200
+  make_wire -8160 -8040 -8100 -8040
+  make_wire -8160 -8430 -8000 -8430
+  make_wire -7940 -8430 -7890 -8430
+  make_wire -7890 -8430 -7890 -8490
+  make_wire -7890 -8490 -7940 -8490
+  make_wire -7890 -8490 -7820 -8490
+  make_wire -8190 -8970 -8190 -8490
+  make_wire -8190 -8970 -7990 -8970
+  make_wire -8190 -8970 -8230 -8970
+  make_wire -8160 -8430 -8160 -8040
+  make_wire -8320 -9120 -8650 -9120
+  make_wire -8320 -9120 -8190 -9120
+  make_wire -8320 -8430 -8160 -8430
+  make_wire -8320 -9120 -8320 -8430
+  make_wire -8000 -8610 -8000 -8490
+  make_wire -8070 -8610 -8000 -8610
+  make_wire -7930 -9130 -8070 -9130
+  make_wire -8070 -9130 -8070 -8610
+  make_wire -8070 -8610 -8070 -8530
+  make_wire -7930 -9580 -7930 -9130
+  make_wire -7820 -8140 -7820 -7970
+  make_wire -7950 -8160 -7950 -8040
+  make_wire -7950 -8040 -7950 -7970
+  make_wire -8040 -8000 -8040 -7970
+  make_wire -9170 -8500 -9170 -8330
+  make_wire -9170 -8330 -9170 -8260
+  make_wire -8780 -8640 -8780 -8260
+  make_wire -9040 -8470 -9040 -8260
+  make_wire -9380 -8290 -9380 -8260
+  make_wire -8780 -7970 -8040 -7970
+  make_wire -8780 -8260 -8780 -7970
+  make_wire -8780 -7750 -8780 -7970
+  make_wire -9040 -8560 -8680 -8560
+  make_wire -7820 -8240 -7820 -8230
+  make_wire -7820 -8230 -7820 -8220
+  make_wire -7460 -8470 -7520 -8470
+  make_wire -7400 -8510 -7400 -8470
+  make_wire -7400 -8430 -7400 -8390
+  make_wire -7460 -8140 -7460 -8260
+  make_wire -7320 -8210 -7320 -8260
+  make_wire -7460 -8350 -7500 -8350
+  make_wire -7500 -8170 -7380 -8170
+  make_wire -7460 -8260 -7400 -8260
+  make_wire -7400 -8260 -7320 -8260
+  make_wire -7400 -8350 -7340 -8350
+  make_wire -7340 -8350 -7340 -8540
+  make_wire -7430 -8040 -7460 -8040
+  make_wire -7430 -8040 -7320 -8040
+  make_wire -7320 -8170 -7320 -8130
+  make_wire -7460 -8100 -7430 -8100
+  make_wire -7460 -8060 -7460 -8040
+  make_wire -7430 -8100 -7430 -8040
+  make_wire -7400 -8540 -7340 -8540
+  make_wire -7320 -8130 -7320 -8040
+  make_wire -7520 -8370 -7520 -8470
+  make_wire -7520 -8370 -7520 -8100
+  make_wire -7500 -8230 -7500 -8350
+  make_wire -7500 -8230 -7500 -8170
+  make_wire -7760 -8840 -7760 -8640
+  make_wire -7440 -8880 -7440 -8770
+  make_wire -7440 -8770 -7440 -8640
+  make_wire -7400 -8600 -7400 -8540
+  make_wire -7400 -8540 -7400 -8510
+  make_wire -7520 -8370 -8680 -8370
+  make_wire -7820 -8230 -7500 -8230
+  make_wire -7400 -8600 -7940 -8600
+  make_wire -7940 -8600 -7940 -8610
+  make_wire -7940 -8600 -7940 -8490
+  make_wire -7820 -7970 -7430 -7970
+  make_wire -7430 -7970 -7430 -8040
+  make_wire -7400 -8310 -7400 -8290
+  make_wire -7400 -8290 -7400 -8260
+  make_wire -7150 -8340 -7200 -8340
+  make_wire -7200 -8240 -7150 -8240
+  make_wire -7090 -8290 -6760 -8290
+  make_wire -7090 -8340 -7040 -8340
+  make_wire -7040 -8240 -7040 -8200
+  make_wire -7200 -8340 -7200 -8290
+  make_wire -7200 -8290 -7200 -8240
+  make_wire -7090 -8240 -7040 -8240
+  make_wire -7090 -8200 -7040 -8200
+  make_wire -7040 -8380 -7040 -8340
+  make_wire -7090 -8380 -7040 -8380
+  make_wire -7200 -8290 -7400 -8290
+  make_wire -7400 -8600 -7090 -8600
+  make_wire -7090 -8600 -7090 -8380
+  make_wire -7430 -7970 -7090 -7970
+  make_wire -7090 -7970 -7090 -8200
+  make_wire -7090 -8300 -7090 -8290
+  make_wire -7090 -8290 -7090 -8280
+  make_wire -7450 -9160 -7450 -9110
+  make_wire -7450 -9110 -7450 -9080
+}
+
+proc ICON_CMOS_FULL_ADDER args {
+
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -20} -name A
+icon_term -type input -origin {-100 0} -name B
+icon_term -type input -origin {-100 20} -name Cin
+icon_term -type output -origin {100 -20} -name Sout
+icon_term -type output -origin {100 0} -name Cout
+icon_term -type inout -origin {100 40} -name a_Vdd
+icon_term -type inout -origin {100 60} -name a_Gnd
+icon_property -origin {-90 -20} -label A
+icon_property -origin {-90 0} -label B
+icon_property -origin {-90 20} -label Cin
+icon_property -origin {90 -20} -anchor e -label Sout
+icon_property -origin {90 0} -anchor e -label Cout
+icon_property -origin {90 40} -anchor e -label a_Vdd
+icon_property -origin {90 60} -anchor e -label a_Gnd
+icon_property -origin {-90 -70} -label {$name}
+icon_property -origin {-90 -50} -label CMOS_FULL_ADDER
+  icon_line -100 -60 100 -60 100 80 -100 80 -100 -60
+icon_property -origin {-90 90} -label {example_param=$example_param}
+  icon_property -origin {-90 150} -type user -name name -default x
+  icon_property -origin {-90 170} -type user -name example_param -default 1.0
+
+}
+

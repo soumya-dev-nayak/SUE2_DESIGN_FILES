@@ -1,0 +1,28 @@
+proc SCHEMATIC_test_SR_Flip_Flop {} {
+make input -name clk -origin {350 0}
+make input -name r -origin {150 -40}
+make input -name s -origin {260 -20}
+make global -name vdd -origin {620 80}
+make global -name gnd -origin {700 230}
+make output -name q -origin {600 -40}
+make output -name ~q -origin {600 -20}
+make SR_Flip_Flop -name xi0 -origin {500 -20}
+make pulse -name V0 -pulse_voltage 1.3V -pulse_width 12ns -period 24ns -origin {150 0}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 6ns -period 12ns -origin {260 20}
+make pulse -name V2 -pulse_voltage 1.3V -origin {350 40}
+  make_wire 600 40 620 40
+  make_wire 600 20 700 20
+  make_wire 150 40 150 220
+  make_wire 700 220 700 20
+  make_wire 700 220 700 230
+  make_wire 350 80 350 220
+  make_wire 260 60 260 220
+  make_wire 620 40 620 80
+  make_wire 350 220 700 220
+  make_wire 350 0 400 0
+  make_wire 260 -20 400 -20
+  make_wire 150 220 260 220
+  make_wire 260 220 350 220
+  make_wire 150 -40 400 -40
+}
+

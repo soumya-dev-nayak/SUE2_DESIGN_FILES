@@ -1,0 +1,31 @@
+proc SCHEMATIC_my_XOR_new_test {} {
+make output -name Out -origin {170 120}
+make input -name A -origin {-170 120}
+make input -name B -origin {-170 170}
+make global -orient RXY -name Vdd -origin {160 160}
+make global -name Gnd -origin {160 320}
+make my_XOR -name xi0 -origin {10 150}
+make pulse -orient RXY -name V0 -origin {-170 80}
+make pulse -name V1 -pulse_width 4ns -period 8ns -origin {-170 210}
+  make_wire -90 120 -170 120
+  make_wire -90 120 -90 140
+  make_wire -90 170 -170 170
+  make_wire -90 160 -90 170
+  make_wire -170 40 -170 10
+  make_wire -170 10 -250 10
+  make_wire -170 270 -170 250
+  make_wire 110 120 170 120
+  make_wire 110 120 110 140
+  make_wire 110 200 160 200
+  make_wire 160 160 160 180
+  make_wire 110 180 160 180
+  make_wire -250 140 -280 140
+  make_wire -280 140 -280 300
+  make_wire -280 300 160 300
+  make_wire 160 300 160 200
+  make_wire 160 300 160 320
+  make_wire -250 140 -250 10
+  make_wire -250 140 -250 270
+  make_wire -250 270 -170 270
+}
+

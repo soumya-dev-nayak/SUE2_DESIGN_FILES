@@ -1,0 +1,16 @@
+proc SCHEMATIC_MyVLSITest {} {
+make EXAM -name xi0 -origin {0 0}
+make input -origin {-680 -10}
+make input -origin {-100 -20}
+make input -origin {-110 0}
+make input -origin {-100 20}
+make input -origin {-130 50}
+make input -origin {-100 60}
+  make_wire -110 0 -100 0
+  make_wire -100 50 -130 50
+  make_wire -100 40 -100 50
+  make_wire -100 -10 -680 -10
+  make_wire -100 -40 -100 -20
+  make_wire -100 -20 -100 -10
+}
+

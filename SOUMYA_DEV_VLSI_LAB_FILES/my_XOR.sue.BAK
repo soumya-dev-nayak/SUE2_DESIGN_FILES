@@ -1,0 +1,169 @@
+proc SCHEMATIC_my_XOR {} {
+make inout -name a_Vdd -origin {-970 -590}
+make inout -name a_Gnd -origin {-840 640}
+make input -name A -origin {-1370 -220}
+make input -name B -origin {-1380 180}
+make output -name Out -origin {-250 40}
+make nmos4 -orient RXY -name M3 -origin {-670 140}
+make nmos4 -orient RXY -name M4 -origin {-670 270}
+make nmos4 -name M7 -origin {-1070 -170}
+make nmos4 -name M9 -origin {-1060 240}
+make nmos4 -name M10 -origin {-830 140}
+make nmos4 -name M11 -origin {-830 270}
+make pmos4 -name M6 -w 3.0u -origin {-1070 -270}
+make pmos4 -name M0 -w 3.0u -origin {-830 -260}
+make pmos4 -orient RXY -name M5 -w 3.0u -origin {-670 -260}
+make pmos4 -orient RXY -name M1 -w 3.0u -origin {-670 -80}
+make pmos4 -name M2 -w 3.0u -origin {-830 -80}
+make pmos4 -name M8 -w 3.0u -origin {-1050 130}
+  make_wire -670 -170 -670 -120
+  make_wire -830 -40 -830 -10
+  make_wire -670 -10 -670 -40
+  make_wire -830 100 -830 70
+  make_wire -670 70 -670 100
+  make_wire -670 -220 -670 -170
+  make_wire -1190 -220 -1170 -220
+  make_wire -1160 240 -1120 240
+  make_wire -1210 180 -1160 180
+  make_wire -1110 130 -1160 130
+  make_wire -1370 -220 -1190 -220
+  make_wire -1070 -430 -1230 -430
+  make_wire -1230 -430 -1230 20
+  make_wire -1070 -430 -970 -430
+  make_wire -830 -430 -970 -430
+  make_wire -950 -40 -1190 -40
+  make_wire -550 -260 -610 -260
+  make_wire -750 40 -250 40
+  make_wire -750 -10 -750 40
+  make_wire -750 40 -750 70
+  make_wire -1080 -70 -1260 -70
+  make_wire -1260 -70 -1260 310
+  make_wire -1230 20 -1050 20
+  make_wire -750 -430 -830 -430
+  make_wire -750 -430 -670 -430
+  make_wire -1050 130 -1010 130
+  make_wire -1010 130 -1010 50
+  make_wire -1010 50 -1050 50
+  make_wire -1050 50 -1050 20
+  make_wire -1070 -270 -1040 -270
+  make_wire -1040 -320 -1070 -320
+  make_wire -840 550 -1060 550
+  make_wire -840 550 -740 550
+  make_wire -830 380 -740 380
+  make_wire -740 380 -670 380
+  make_wire -940 400 -610 400
+  make_wire -750 -260 -670 -260
+  make_wire -1130 -170 -1170 -170
+  make_wire -750 -260 -830 -260
+  make_wire -750 -80 -830 -80
+  make_wire -750 -80 -670 -80
+  make_wire -750 -260 -750 -430
+  make_wire -970 -590 -970 -430
+  make_wire -1050 50 -1050 90
+  make_wire -670 -430 -670 -300
+  make_wire -830 -430 -830 -300
+  make_wire -1030 240 -1030 310
+  make_wire -1060 310 -1260 310
+  make_wire -1060 310 -1030 310
+  make_wire -670 -170 -830 -170
+  make_wire -1190 -220 -1190 -40
+  make_wire -950 -260 -890 -260
+  make_wire -940 180 -940 400
+  make_wire -890 140 -950 140
+  make_wire -900 270 -900 420
+  make_wire -550 -340 -550 -260
+  make_wire -1290 -340 -550 -340
+  make_wire -1290 180 -1380 180
+  make_wire -1290 180 -1210 180
+  make_wire -540 450 -980 450
+  make_wire -540 140 -610 140
+  make_wire -830 -220 -830 -170
+  make_wire -830 -170 -830 -120
+  make_wire -750 -260 -750 -80
+  make_wire -830 -10 -750 -10
+  make_wire -750 -10 -670 -10
+  make_wire -890 -80 -980 -80
+  make_wire -980 -230 -980 -80
+  make_wire -980 -80 -980 450
+  make_wire -1290 -340 -1290 180
+  make_wire -540 140 -540 450
+  make_wire -740 140 -740 270
+  make_wire -670 180 -670 230
+  make_wire -610 -80 -590 -80
+  make_wire -590 -80 -590 270
+  make_wire -590 270 -610 270
+  make_wire -670 270 -740 270
+  make_wire -670 140 -740 140
+  make_wire -1060 240 -1030 240
+  make_wire -1060 280 -1060 310
+  make_wire -1060 310 -1060 550
+  make_wire -1060 180 -1050 180
+  make_wire -1050 180 -940 180
+  make_wire -1160 130 -1160 180
+  make_wire -1160 180 -1160 240
+  make_wire -840 550 -840 640
+  make_wire -670 310 -670 380
+  make_wire -740 270 -740 380
+  make_wire -740 380 -740 550
+  make_wire -830 140 -740 140
+  make_wire -950 -260 -950 -40
+  make_wire -950 -40 -950 140
+  make_wire -830 70 -750 70
+  make_wire -750 70 -670 70
+  make_wire -1210 420 -900 420
+  make_wire -830 310 -830 380
+  make_wire -830 180 -830 230
+  make_wire -830 270 -740 270
+  make_wire -610 270 -610 400
+  make_wire -890 270 -900 270
+  make_wire -1210 180 -1210 420
+  make_wire -1070 -430 -1070 -320
+  make_wire -1070 -320 -1070 -310
+  make_wire -1040 -320 -1040 -270
+  make_wire -1130 -270 -1170 -270
+  make_wire -1070 -130 -1070 -110
+  make_wire -1080 -110 -1080 -70
+  make_wire -1070 -230 -980 -230
+  make_wire -1070 -170 -1040 -170
+  make_wire -1080 -110 -1070 -110
+  make_wire -1070 -110 -1040 -110
+  make_wire -1070 -230 -1070 -210
+  make_wire -1040 -170 -1040 -110
+  make_wire -1170 -270 -1170 -220
+  make_wire -1170 -220 -1170 -170
+  make_wire -1050 170 -1050 180
+  make_wire -1060 180 -1060 200
+}
+
+proc ICON_my_XOR args {
+
+
+
+
+
+
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -10} -name A
+icon_term -type input -origin {-100 10} -name B
+icon_term -type output -origin {100 -10} -name Out
+icon_term -type inout -origin {100 30} -name a_Vdd
+icon_term -type inout -origin {100 50} -name a_Gnd
+icon_property -origin {-90 -10} -label A
+icon_property -origin {-90 10} -label B
+icon_property -origin {90 -10} -anchor e -label Out
+icon_property -origin {90 30} -anchor e -label a_Vdd
+icon_property -origin {90 50} -anchor e -label a_Gnd
+icon_property -origin {-90 -60} -label {$name}
+icon_property -origin {-90 -40} -label my_XOR
+  icon_line -100 -50 100 -50 100 70 -100 70 -100 -50
+icon_property -origin {-90 80} -label {example_param=$example_param}
+  icon_property -origin {-90 140} -type user -name name -default x
+  icon_property -origin {-90 160} -type user -name example_param -default 1.0
+
+
+
+
+
+
+}
+

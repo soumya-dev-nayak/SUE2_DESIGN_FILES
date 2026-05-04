@@ -1,0 +1,167 @@
+proc SCHEMATIC_First_Boolean_Function {} {
+
+make inout -name a_Gnd -origin {0 1290}
+make inout -name a_Vdd -origin {-10 -280}
+make input -name A -origin {-740 -160}
+make input -name B -origin {-750 -100}
+make input -name G -origin {-760 -10}
+make input -name C -origin {-760 80}
+make input -name D -origin {-750 150}
+make input -name E -origin {-760 300}
+make input -name F -origin {-760 370}
+make output -name Y -origin {300 510}
+make pmos4 -name M0 -origin {-160 -160}
+make pmos4 -name M1 -origin {-160 80}
+make pmos4 -name M2 -origin {-10 150}
+make pmos4 -name M3 -origin {-10 -100}
+make pmos4 -name M4 -origin {130 -10}
+make pmos4 -name M5 -origin {-160 370}
+make pmos4 -name M6 -origin {130 300}
+make nmos4 -name M7 -origin {-170 670}
+make nmos4 -name M8 -origin {-170 950}
+make nmos4 -name M9 -origin {-10 610}
+make nmos4 -name M10 -origin {-10 880}
+make nmos4 -name M11 -origin {150 720}
+make nmos4 -name M12 -origin {150 820}
+make nmos4 -name M13 -origin {-170 1110}
+  make_wire -10 -100 30 -100
+  make_wire -160 -230 -160 -200
+  make_wire 30 -230 -10 -230
+  make_wire -160 30 -10 30
+  make_wire -160 240 -10 240
+  make_wire 130 240 -10 240
+  make_wire 130 -230 30 -230
+  make_wire 130 340 130 450
+  make_wire -160 410 -160 450
+  make_wire -160 370 -100 370
+  make_wire 130 300 160 300
+  make_wire 160 -70 130 -70
+  make_wire 130 -10 160 -10
+  make_wire -170 630 -170 550
+  make_wire -10 550 -10 570
+  make_wire -10 920 -10 1030
+  make_wire -170 990 -170 1030
+  make_wire -10 650 -10 840
+  make_wire -170 710 -170 910
+  make_wire 150 550 150 680
+  make_wire -170 1030 -170 1070
+  make_wire -170 1150 -170 1200
+  make_wire -10 450 -160 450
+  make_wire -10 450 130 450
+  make_wire -10 1030 -170 1030
+  make_wire 0 1200 0 1290
+  make_wire -170 670 -100 670
+  make_wire -100 1200 -170 1200
+  make_wire -100 1200 0 1200
+  make_wire -170 1110 -100 1110
+  make_wire -100 1110 -100 1200
+  make_wire -170 950 -100 950
+  make_wire -100 950 -100 1110
+  make_wire -100 950 -100 670
+  make_wire -10 880 50 880
+  make_wire 50 880 50 1200
+  make_wire -10 610 50 610
+  make_wire 50 610 50 880
+  make_wire 0 1200 50 1200
+  make_wire 50 1200 150 1200
+  make_wire 150 720 210 720
+  make_wire 210 900 150 900
+  make_wire 150 900 150 1200
+  make_wire 150 900 150 860
+  make_wire 150 820 210 820
+  make_wire -160 80 -100 80
+  make_wire -160 -230 -100 -230
+  make_wire -100 -230 -10 -230
+  make_wire -10 150 30 150
+  make_wire -160 -160 -100 -160
+  make_wire -100 -160 -100 -230
+  make_wire -10 190 -10 240
+  make_wire 130 30 130 240
+  make_wire 130 240 130 260
+  make_wire 160 -70 160 -10
+  make_wire 160 300 160 -10
+  make_wire 130 -230 130 -70
+  make_wire 130 -70 130 -50
+  make_wire -10 -60 -10 30
+  make_wire -10 30 -10 110
+  make_wire -10 -280 -10 -230
+  make_wire -10 -230 -10 -140
+  make_wire 30 -230 30 -100
+  make_wire 30 150 30 -100
+  make_wire -160 -120 -160 30
+  make_wire -160 30 -160 40
+  make_wire -160 120 -160 240
+  make_wire -160 240 -160 330
+  make_wire -100 -160 -100 80
+  make_wire -100 370 -100 80
+  make_wire -340 670 -230 670
+  make_wire -580 950 -230 950
+  make_wire -260 610 -70 610
+  make_wire -260 80 -760 80
+  make_wire -260 80 -220 80
+  make_wire -580 -100 -580 950
+  make_wire -260 80 -260 610
+  make_wire -740 -160 -340 -160
+  make_wire -340 -160 -220 -160
+  make_wire -520 150 -520 880
+  make_wire -520 880 -70 880
+  make_wire -750 -100 -580 -100
+  make_wire -580 -100 -70 -100
+  make_wire -750 150 -520 150
+  make_wire -520 150 -70 150
+  make_wire -340 -160 -340 670
+  make_wire 150 760 150 780
+  make_wire 210 720 210 820
+  make_wire 210 820 210 900
+  make_wire -170 550 -10 550
+  make_wire -10 550 150 550
+  make_wire -400 300 -400 720
+  make_wire -400 720 90 720
+  make_wire -400 300 70 300
+  make_wire -400 300 -760 300
+  make_wire -450 370 -450 820
+  make_wire -450 820 90 820
+  make_wire -450 370 -220 370
+  make_wire -450 370 -760 370
+  make_wire -640 -10 -640 1110
+  make_wire -640 1110 -230 1110
+  make_wire -640 -10 70 -10
+  make_wire -640 -10 -760 -10
+  make_wire -10 510 300 510
+  make_wire -10 450 -10 510
+  make_wire -10 510 -10 550
+
+}
+
+proc ICON_First_Boolean_Function args {
+
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -50} -name A
+icon_term -type input -origin {-100 -30} -name B
+icon_term -type input -origin {-100 -10} -name G
+icon_term -type input -origin {-100 10} -name C
+icon_term -type input -origin {-100 30} -name D
+icon_term -type input -origin {-100 50} -name E
+icon_term -type input -origin {-100 70} -name F
+icon_term -type output -origin {100 -50} -name Y
+icon_term -type inout -origin {100 -10} -name a_Gnd
+icon_term -type inout -origin {100 10} -name a_Vdd
+icon_property -origin {-90 -50} -label A
+icon_property -origin {-90 -30} -label B
+icon_property -origin {-90 -10} -label G
+icon_property -origin {-90 10} -label C
+icon_property -origin {-90 30} -label D
+icon_property -origin {-90 50} -label E
+icon_property -origin {-90 70} -label F
+icon_property -origin {90 -50} -anchor e -label Y
+icon_property -origin {90 -10} -anchor e -label a_Gnd
+icon_property -origin {90 10} -anchor e -label a_Vdd
+icon_property -origin {-90 -100} -label {$name}
+  icon_line -100 -90 100 -90 100 90 -100 90 -100 -90
+icon_property -origin {-90 100} -label {example_param=$example_param}
+  icon_property -origin {-90 160} -type user -name name -default x
+  icon_property -origin {-90 180} -type user -name example_param -default 1.0
+icon_property -origin {-90 -80} -label Boolean_bar((AB+CD)G+EF)
+
+}
+

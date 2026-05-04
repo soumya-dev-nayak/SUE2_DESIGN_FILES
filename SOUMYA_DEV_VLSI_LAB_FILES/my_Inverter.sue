@@ -1,0 +1,44 @@
+proc SCHEMATIC_my_Inverter {} {
+
+make input -name Vin -origin {920 2310}
+make output -name Vout -origin {1170 2310}
+make inout -name a_Vdd -origin {1080 2170}
+make inout -name a_Gnd -origin {1080 2460}
+make pmos4 -name M0 -origin {1080 2260}
+make nmos4 -name M1 -origin {1080 2360}
+  make_wire 1020 2260 970 2260
+  make_wire 970 2360 1020 2360
+  make_wire 1080 2310 1170 2310
+  make_wire 920 2310 970 2310
+  make_wire 1080 2260 1130 2260
+  make_wire 1130 2360 1130 2400
+  make_wire 1080 2300 1080 2310
+  make_wire 1080 2310 1080 2320
+  make_wire 970 2260 970 2310
+  make_wire 970 2310 970 2360
+  make_wire 1080 2360 1130 2360
+  make_wire 1080 2400 1130 2400
+  make_wire 1130 2220 1130 2260
+  make_wire 1080 2220 1130 2220
+  make_wire 1080 2170 1080 2220
+  make_wire 1080 2400 1080 2460
+
+}
+
+proc ICON_my_Inverter args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -10} -name Vin
+icon_term -type output -origin {100 -10} -name Vout
+icon_term -type inout -origin {100 30} -name a_Vdd
+icon_term -type inout -origin {100 50} -name a_Gnd
+icon_property -origin {-90 -10} -label Vin
+icon_property -origin {90 -10} -anchor e -label Vout
+icon_property -origin {90 30} -anchor e -label a_Vdd
+icon_property -origin {90 50} -anchor e -label a_Gnd
+icon_property -origin {-90 -40} -label my_Inverter
+  icon_line -100 -50 100 -50 100 70 -100 70 -100 -50
+icon_property -origin {-90 80} -label {example_param=$example_param}
+  icon_property -origin {-90 140} -type user -name name -default x
+  icon_property -origin {-90 160} -type user -name example_param -default 1.0
+}
+

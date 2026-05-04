@@ -1,0 +1,43 @@
+proc SCHEMATIC_soumya_inverter {} {
+make input -name Vin -origin {-130 220}
+make output -name Vout -origin {120 220}
+make inout -name a_Vdd -origin {30 80}
+make inout -name a_Gnd -origin {30 370}
+make pmos4 -name M0 -origin {30 170}
+make nmos4 -name M1 -origin {30 270}
+  make_wire -30 170 -80 170
+  make_wire -80 270 -30 270
+  make_wire 30 220 120 220
+  make_wire -130 220 -80 220
+  make_wire 30 170 80 170
+  make_wire 80 270 80 310
+  make_wire 30 210 30 220
+  make_wire 30 220 30 230
+  make_wire -80 170 -80 220
+  make_wire -80 220 -80 270
+  make_wire 30 270 80 270
+  make_wire 30 310 80 310
+  make_wire 80 130 80 170
+  make_wire 30 130 80 130
+  make_wire 30 80 30 130
+  make_wire 30 310 30 370
+}
+
+proc ICON_soumya_inverter args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -10} -name Vin
+icon_term -type output -origin {100 -10} -name Vout
+icon_term -type inout -origin {100 30} -name a_Vdd
+icon_term -type inout -origin {100 50} -name a_Gnd
+icon_property -origin {-90 -10} -label Vin
+icon_property -origin {90 -10} -anchor e -label Vout
+icon_property -origin {90 30} -anchor e -label a_Vdd
+icon_property -origin {90 50} -anchor e -label a_Gnd
+icon_property -origin {-90 -60} -label {$name}
+icon_property -origin {-90 -40} -label soumya_inverter
+  icon_line -100 -50 100 -50 100 70 -100 70 -100 -50
+icon_property -origin {-90 80} -label {example_param=$example_param}
+  icon_property -origin {-90 140} -type user -name name -default x
+  icon_property -origin {-90 160} -type user -name example_param -default 1.0
+}
+

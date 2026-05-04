@@ -1,0 +1,178 @@
+proc SCHEMATIC__8_BIT_ADDER {} {
+make output -orient RXY -name S0 -origin {340 -90}
+make output -orient RXY -name S1 -origin {10 -90}
+make input -orient RXY -name A0 -origin {540 -90}
+make input -orient RXY -name B0 -origin {540 -70}
+make input -orient RXY -name Cin -origin {540 -50}
+make input -orient RXY -name A1 -origin {210 -90}
+make input -orient RXY -name B1 -origin {210 -70}
+make input -orient RXY -name A2 -origin {-120 -90}
+make input -orient RXY -name B2 -origin {-120 -70}
+make output -orient RXY -name S2 -origin {-320 -90}
+make input -orient RXY -name A3 -origin {-470 -90}
+make input -orient RXY -name B3 -origin {-470 -70}
+make output -orient RXY -name S3 -origin {-670 -90}
+make input -orient RXY -name A4 -origin {-830 -90}
+make input -orient RXY -name B4 -origin {-830 -70}
+make output -orient RXY -name S4 -origin {-1030 -90}
+make input -orient RXY -name A7 -origin {-1870 -80}
+make input -orient RXY -name B7 -origin {-1870 -60}
+make input -orient RXY -name A6 -origin {-1510 -80}
+make input -orient RXY -name B6 -origin {-1510 -60}
+make input -orient RXY -name A5 -origin {-1180 -80}
+make input -orient RXY -name B5 -origin {-1180 -60}
+make output -orient RXY -name S5 -origin {-1380 -80}
+make output -orient RXY -name S6 -origin {-1710 -80}
+make output -orient RXY -name S7 -origin {-2070 -80}
+make output -orient RXY -name Cout -origin {-2070 -60}
+make CMOS_FULL_ADDER -orient RX -name xi0 -origin {440 -70}
+make CMOS_FULL_ADDER -orient RX -name xi1 -origin {110 -70}
+make CMOS_FULL_ADDER -orient RX -name xi2 -origin {-220 -70}
+make CMOS_FULL_ADDER -orient RX -name xi3 -origin {-570 -70}
+make CMOS_FULL_ADDER -orient RX -name xi4 -origin {-930 -70}
+make CMOS_FULL_ADDER -orient RX -name xi5 -origin {-1280 -60}
+make CMOS_FULL_ADDER -orient RX -name xi6 -origin {-1610 -60}
+make CMOS_FULL_ADDER -orient RX -name xi7 -origin {-1970 -60}
+make inout -name a_Vdd -origin {290 390}
+make inout -name a_Gnd -origin {320 310}
+  make_wire 320 -10 320 250
+  make_wire -2110 250 -2110 0
+  make_wire -1750 0 -1750 250
+  make_wire -1750 250 -2110 250
+  make_wire -1400 0 -1400 250
+  make_wire -1400 250 -1750 250
+  make_wire -1070 -10 -1070 250
+  make_wire -1070 250 -1400 250
+  make_wire -700 -10 -700 250
+  make_wire -700 250 -1070 250
+  make_wire -350 -10 -350 250
+  make_wire -350 250 -700 250
+  make_wire -20 -10 -20 250
+  make_wire -20 250 -350 250
+  make_wire -20 250 320 250
+  make_wire -2190 -20 -2190 320
+  make_wire 290 320 290 -30
+  make_wire -1810 -20 -1810 320
+  make_wire -1810 320 -2190 320
+  make_wire -1460 -20 -1460 320
+  make_wire -1460 320 -1810 320
+  make_wire -1130 -30 -1130 320
+  make_wire -1130 320 -1460 320
+  make_wire -770 -30 -770 320
+  make_wire -770 320 -1130 320
+  make_wire -410 -30 -410 320
+  make_wire -410 320 -770 320
+  make_wire -60 -30 -60 320
+  make_wire -60 320 -410 320
+  make_wire -60 320 290 320
+  make_wire -2190 -20 -2070 -20
+  make_wire -1810 -20 -1710 -20
+  make_wire -700 -10 -670 -10
+  make_wire 320 -10 340 -10
+  make_wire -20 -10 10 -10
+  make_wire -1750 0 -1710 0
+  make_wire -1460 -20 -1380 -20
+  make_wire -60 -30 10 -30
+  make_wire 290 -30 340 -30
+  make_wire -1070 -10 -1030 -10
+  make_wire -410 -30 -320 -30
+  make_wire -770 -30 -670 -30
+  make_wire -1130 -30 -1030 -30
+  make_wire -1400 0 -1380 0
+  make_wire -2110 0 -2070 0
+  make_wire -350 -10 -320 -10
+  make_wire 210 -50 320 -50
+  make_wire 320 -50 320 -70
+  make_wire 320 -70 340 -70
+  make_wire -120 -50 -30 -50
+  make_wire -30 -50 -30 -70
+  make_wire -30 -70 10 -70
+  make_wire -470 -50 -400 -50
+  make_wire -400 -50 -400 -70
+  make_wire -400 -70 -320 -70
+  make_wire -830 -50 -690 -50
+  make_wire -690 -50 -690 -70
+  make_wire -690 -70 -670 -70
+  make_wire -1180 -40 -1050 -40
+  make_wire -1050 -40 -1050 -70
+  make_wire -1050 -70 -1030 -70
+  make_wire -1510 -40 -1420 -40
+  make_wire -1420 -40 -1420 -60
+  make_wire -1420 -60 -1380 -60
+  make_wire -1870 -40 -1740 -40
+  make_wire -1740 -40 -1740 -60
+  make_wire -1740 -60 -1710 -60
+  make_wire 290 390 290 320
+  make_wire 320 250 320 310
+}
+
+proc ICON__8_BIT_ADDER args {
+
+
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -150} -name A0
+icon_term -type input -origin {-100 -130} -name B0
+icon_term -type input -origin {-100 -110} -name Cin
+icon_term -type input -origin {-100 -90} -name A1
+icon_term -type input -origin {-100 -70} -name B1
+icon_term -type input -origin {-100 -50} -name A2
+icon_term -type input -origin {-100 -30} -name B2
+icon_term -type input -origin {-100 -10} -name A3
+icon_term -type input -origin {-100 10} -name B3
+icon_term -type input -origin {-100 30} -name A4
+icon_term -type input -origin {-100 50} -name B4
+icon_term -type input -origin {-100 70} -name A7
+icon_term -type input -origin {-100 90} -name B7
+icon_term -type input -origin {-100 110} -name A6
+icon_term -type input -origin {-100 130} -name B6
+icon_term -type input -origin {-100 150} -name A5
+icon_term -type input -origin {-100 170} -name B5
+icon_term -type output -origin {100 -150} -name S0
+icon_term -type output -origin {100 -130} -name S1
+icon_term -type output -origin {100 -110} -name S2
+icon_term -type output -origin {100 -90} -name S3
+icon_term -type output -origin {100 -70} -name S4
+icon_term -type output -origin {100 -50} -name S5
+icon_term -type output -origin {100 -30} -name S6
+icon_term -type output -origin {100 -10} -name S7
+icon_term -type output -origin {100 10} -name Cout
+icon_term -type inout -origin {100 50} -name a_Vdd
+icon_term -type inout -origin {100 70} -name a_Gnd
+icon_property -origin {-90 -150} -label A0
+icon_property -origin {-90 -130} -label B0
+icon_property -origin {-90 -110} -label Cin
+icon_property -origin {-90 -90} -label A1
+icon_property -origin {-90 -70} -label B1
+icon_property -origin {-90 -50} -label A2
+icon_property -origin {-90 -30} -label B2
+icon_property -origin {-90 -10} -label A3
+icon_property -origin {-90 10} -label B3
+icon_property -origin {-90 30} -label A4
+icon_property -origin {-90 50} -label B4
+icon_property -origin {-90 70} -label A7
+icon_property -origin {-90 90} -label B7
+icon_property -origin {-90 110} -label A6
+icon_property -origin {-90 130} -label B6
+icon_property -origin {-90 150} -label A5
+icon_property -origin {-90 170} -label B5
+icon_property -origin {90 -150} -anchor e -label S0
+icon_property -origin {90 -130} -anchor e -label S1
+icon_property -origin {90 -110} -anchor e -label S2
+icon_property -origin {90 -90} -anchor e -label S3
+icon_property -origin {90 -70} -anchor e -label S4
+icon_property -origin {90 -50} -anchor e -label S5
+icon_property -origin {90 -30} -anchor e -label S6
+icon_property -origin {90 -10} -anchor e -label S7
+icon_property -origin {90 10} -anchor e -label Cout
+icon_property -origin {90 50} -anchor e -label a_Vdd
+icon_property -origin {90 70} -anchor e -label a_Gnd
+icon_property -origin {-90 -200} -label {$name}
+icon_property -origin {-90 -180} -label _8_BIT_ADDER
+  icon_line -100 -190 100 -190 100 190 -100 190 -100 -190
+icon_property -origin {-90 200} -label {example_param=$example_param}
+  icon_property -origin {-90 260} -type user -name name -default x
+  icon_property -origin {-90 280} -type user -name example_param -default 1.0
+
+
+}
+

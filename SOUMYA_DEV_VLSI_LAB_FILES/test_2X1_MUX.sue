@@ -1,0 +1,30 @@
+proc SCHEMATIC_test_2X1_MUX {} {
+make input -name s -origin {-380 10}
+make input -name i0 -origin {-260 50}
+make input -name i1 -origin {-130 90}
+make output -name y -origin {220 30}
+make global -name Vdd -origin {140 140}
+make global -name Gnd -origin {200 260}
+make CMOS_2X1_MUX -name xi0 -origin {20 40}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 10ns -period 20ns -origin {-260 90}
+make pulse -name V2 -pulse_voltage 1.3V -pulse_width 20ns -period 40ns -origin {-130 130}
+make pulse -name V0 -pulse_voltage 1.3V -pulse_width 40ns -period 80ns -origin {-380 50}
+  make_wire -80 10 -80 30
+  make_wire -80 70 -80 90
+  make_wire -80 50 -260 50
+  make_wire 120 90 140 90
+  make_wire 140 90 140 140
+  make_wire -130 90 -80 90
+  make_wire -380 10 -80 10
+  make_wire 120 70 200 70
+  make_wire -130 220 200 220
+  make_wire 200 220 200 70
+  make_wire 120 30 220 30
+  make_wire -260 130 -260 220
+  make_wire -380 90 -380 220
+  make_wire 200 220 200 260
+  make_wire -130 170 -130 220
+  make_wire -380 220 -260 220
+  make_wire -260 220 -130 220
+}
+

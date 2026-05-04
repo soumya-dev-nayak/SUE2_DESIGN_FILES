@@ -1,0 +1,32 @@
+proc SCHEMATIC_test_HALF_SUBTRACTOR {} {
+make CMOS_HALF_SUBTRACTOR -name xi0 -origin {10 930}
+make output -name Diff -origin {180 890}
+make output -name Borrow -origin {210 930}
+make input -name A -origin {-230 900}
+make input -name B -origin {-230 950}
+make global -orient RXY -name Vdd -origin {190 970}
+make global -name Gnd -origin {130 1190}
+make pulse -orient RXY -name V0 -pulse_voltage 1.3V -origin {-190 860}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 4ns -period 8ns -origin {-190 990}
+  make_wire 110 930 210 930
+  make_wire 110 890 180 890
+  make_wire 110 890 110 910
+  make_wire -90 900 -90 910
+  make_wire -90 930 -90 950
+  make_wire 110 990 130 990
+  make_wire 110 970 190 970
+  make_wire -190 900 -90 900
+  make_wire -190 950 -90 950
+  make_wire -230 950 -190 950
+  make_wire -190 900 -230 900
+  make_wire -190 820 -350 820
+  make_wire -350 1030 -190 1030
+  make_wire -350 940 -400 940
+  make_wire -400 940 -400 1170
+  make_wire -400 1170 130 1170
+  make_wire 130 1170 130 990
+  make_wire 130 1170 130 1190
+  make_wire -350 940 -350 820
+  make_wire -350 940 -350 1030
+}
+

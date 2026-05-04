@@ -1,0 +1,24 @@
+proc SCHEMATIC_test_CMOS_NOR_GATE_sue {} {
+make CMOS_NOR_GATE_sue -name xi0 -origin {820 390}
+make pulse -orient RXY -name V0 -pulse_voltage 1.3V -origin {670 340}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 4ns -period 8ns -origin {670 440}
+make global -orient R90 -name Gnd -origin {600 400}
+make input -name A -origin {670 380}
+make input -name B -origin {670 400}
+make output -name Y -origin {950 360}
+make global -orient RXY -name Vdd -origin {950 400}
+make global -name Gnd -origin {950 460}
+  make_wire 670 300 600 300
+  make_wire 600 480 670 480
+  make_wire 720 380 670 380
+  make_wire 720 400 670 400
+  make_wire 600 300 600 400
+  make_wire 600 400 600 480
+  make_wire 920 420 950 420
+  make_wire 950 440 950 460
+  make_wire 950 400 950 420
+  make_wire 950 360 920 360
+  make_wire 920 360 920 380
+  make_wire 920 440 950 440
+}
+

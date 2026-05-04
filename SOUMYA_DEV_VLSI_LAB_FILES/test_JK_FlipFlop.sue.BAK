@@ -1,0 +1,27 @@
+proc SCHEMATIC_test_JK_FlipFlop {} {
+make output -name Q -origin {220 40}
+make output -name Qbar -origin {220 60}
+make global -name Gnd -origin {240 200}
+make global -name Vdd -origin {300 150}
+make input -name J -origin {-220 40}
+make input -name K -origin {-120 60}
+make input -name clk -origin {-20 80}
+make JK_FlipFlop -name xi0 -origin {120 60}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 5ns -period 10ns -origin {-220 80}
+make pulse -name V0 -pulse_voltage 1.3V -origin {-20 120}
+make pulse -name V2 -pulse_voltage 1.3V -pulse_width 5ns -period 10ns -origin {-120 100}
+  make_wire -220 40 20 40
+  make_wire -120 60 20 60
+  make_wire 220 120 240 120
+  make_wire 240 120 240 200
+  make_wire 220 100 300 100
+  make_wire 300 100 300 150
+  make_wire -220 120 -220 200
+  make_wire -20 160 -20 200
+  make_wire -120 140 -120 200
+  make_wire -120 200 -220 200
+  make_wire -20 200 -120 200
+  make_wire -20 200 240 200
+  make_wire -20 80 20 80
+}
+

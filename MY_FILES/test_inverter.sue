@@ -1,0 +1,19 @@
+proc SCHEMATIC_test_inverter {} {
+make output -name Out -origin {540 270}
+make global -orient RXY -name Vdd -origin {490 300}
+make global -name Gnd -origin {490 470}
+make pulse -name V0 -origin {170 310}
+make input -name In -origin {110 270}
+make soumya_inverter -name xi0 -origin {350 280}
+  make_wire 490 300 490 310
+  make_wire 490 310 450 310
+  make_wire 450 330 490 330
+  make_wire 450 270 540 270
+  make_wire 170 270 250 270
+  make_wire 170 270 110 270
+  make_wire 170 350 170 380
+  make_wire 170 380 490 380
+  make_wire 490 330 490 380
+  make_wire 490 380 490 470
+}
+

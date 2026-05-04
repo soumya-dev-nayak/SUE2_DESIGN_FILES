@@ -1,0 +1,95 @@
+proc SCHEMATIC_JK_FlipFlop {} {
+make Three_IP_NAND -name xi0 -origin {-620 -120}
+make Three_IP_NAND -name xi1 -origin {-620 130}
+make input -name J -origin {-990 -110}
+make input -name K -origin {-980 140}
+make input -name clk -origin {-990 20}
+make output -name Q -origin {40 -130}
+make output -name ~Q -origin {40 100}
+make CMOS_NAND_GATE3 -name xi2 -origin {-220 -120}
+make CMOS_NAND_GATE3 -name xi3 -origin {-220 110}
+make inout -name a_Vdd -origin {-500 -370}
+make inout -name a_Gnd -origin {-440 -300}
+  make_wire -720 -110 -990 -110
+  make_wire -720 140 -980 140
+  make_wire -520 -130 -320 -130
+  make_wire -320 120 -520 120
+  make_wire -30 40 -360 40
+  make_wire -10 -20 -360 -20
+  make_wire -360 -110 -320 -110
+  make_wire -120 100 -10 100
+  make_wire -120 -130 -30 -130
+  make_wire -360 100 -320 100
+  make_wire -360 250 -750 250
+  make_wire -750 250 -750 160
+  make_wire -360 -210 -750 -210
+  make_wire -750 -210 -750 -130
+  make_wire -720 -90 -760 -90
+  make_wire -760 120 -720 120
+  make_wire -760 20 -990 20
+  make_wire -750 -130 -720 -130
+  make_wire -750 160 -720 160
+  make_wire -360 40 -360 100
+  make_wire -360 100 -360 250
+  make_wire -360 -210 -360 -110
+  make_wire -360 -110 -360 -20
+  make_wire -30 -130 40 -130
+  make_wire -30 -130 -30 40
+  make_wire -10 100 40 100
+  make_wire -10 -20 -10 100
+  make_wire -120 -90 -60 -90
+  make_wire -120 -70 -90 -70
+  make_wire -800 -250 -800 290
+  make_wire -100 160 -120 160
+  make_wire -120 140 -50 140
+  make_wire -50 140 -50 390
+  make_wire -60 -320 -60 -90
+  make_wire -760 -90 -760 20
+  make_wire -760 20 -760 120
+  make_wire -90 -250 -90 -70
+  make_wire -100 160 -100 290
+  make_wire -850 -320 -850 390
+  make_wire -520 -90 -500 -90
+  make_wire -500 -320 -850 -320
+  make_wire -500 -320 -60 -320
+  make_wire -520 -70 -440 -70
+  make_wire -440 -70 -440 -250
+  make_wire -440 -250 -90 -250
+  make_wire -440 -250 -800 -250
+  make_wire -520 180 -510 180
+  make_wire -510 180 -510 290
+  make_wire -510 290 -800 290
+  make_wire -510 290 -100 290
+  make_wire -520 160 -440 160
+  make_wire -440 160 -440 390
+  make_wire -440 390 -850 390
+  make_wire -440 390 -50 390
+  make_wire -440 -250 -440 -300
+  make_wire -500 -370 -500 -320
+  make_wire -500 -320 -500 -90
+}
+
+proc ICON_JK_FlipFlop args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -20} -name J
+icon_term -type input -origin {-100 0} -name K
+icon_term -type input -origin {-100 20} -name clk
+icon_term -type output -origin {100 -20} -name Q
+icon_term -type output -origin {100 0} -name ~Q
+icon_term -type inout -origin {100 40} -name a_Vdd
+icon_term -type inout -origin {100 60} -name a_Gnd
+icon_property -origin {-90 -20} -label J
+icon_property -origin {-90 0} -label K
+icon_property -origin {-90 20} -label clk
+icon_property -origin {90 -20} -anchor e -label Q
+icon_property -origin {90 0} -anchor e -label ~Q
+icon_property -origin {90 40} -anchor e -label a_Vdd
+icon_property -origin {90 60} -anchor e -label a_Gnd
+icon_property -origin {-90 -70} -label {$name}
+icon_property -origin {-90 -50} -label JK_FlipFlop
+  icon_line -100 -60 100 -60 100 80 -100 80 -100 -60
+icon_property -origin {-90 90} -label {example_param=$example_param}
+  icon_property -origin {-90 150} -type user -name name -default x
+  icon_property -origin {-90 170} -type user -name example_param -default 1.0
+}
+

@@ -1,0 +1,84 @@
+proc SCHEMATIC_CMOS_OR_GATE {} {
+make inout -name a_Vdd -origin {-3920 -1910}
+make inout -name a_Gnd -origin {-3950 -1280}
+make input -name A -origin {-4120 -1630}
+make input -name B -origin {-4120 -1540}
+make pmos4 -name M0 -origin {-3920 -1750}
+make nmos4 -name M1 -origin {-3980 -1380}
+make pmos4 -name M2 -origin {-3920 -1630}
+make nmos4 -name M3 -origin {-3840 -1450}
+make output -name Vout -origin {-3610 -1570}
+make pmos4 -name M4 -origin {-3740 -1620}
+make nmos4 -name M5 -origin {-3740 -1520}
+  make_wire -3980 -1750 -4040 -1750
+  make_wire -4040 -1630 -4120 -1630
+  make_wire -3920 -1790 -3920 -1750
+  make_wire -3920 -1710 -3920 -1670
+  make_wire -3980 -1420 -3980 -1540
+  make_wire -3840 -1490 -3840 -1540
+  make_wire -3980 -1630 -4020 -1630
+  make_wire -4020 -1450 -3900 -1450
+  make_wire -4020 -1540 -4120 -1540
+  make_wire -4040 -1630 -4040 -1750
+  make_wire -4040 -1630 -4040 -1380
+  make_wire -4020 -1630 -4020 -1540
+  make_wire -4020 -1540 -4020 -1450
+  make_wire -3980 -1540 -3920 -1540
+  make_wire -3920 -1540 -3840 -1540
+  make_wire -3920 -1630 -3860 -1630
+  make_wire -3950 -1320 -3980 -1320
+  make_wire -3950 -1320 -3840 -1320
+  make_wire -3840 -1450 -3840 -1410
+  make_wire -3980 -1380 -3950 -1380
+  make_wire -3980 -1340 -3980 -1320
+  make_wire -3950 -1380 -3950 -1320
+  make_wire -3950 -1320 -3950 -1280
+  make_wire -3920 -1820 -3920 -1910
+  make_wire -3920 -1820 -3920 -1790
+  make_wire -3920 -1820 -3860 -1820
+  make_wire -3800 -1620 -3810 -1620
+  make_wire -3810 -1520 -3800 -1520
+  make_wire -3740 -1570 -3610 -1570
+  make_wire -3740 -1620 -3690 -1620
+  make_wire -3690 -1520 -3690 -1480
+  make_wire -3740 -1520 -3690 -1520
+  make_wire -3740 -1480 -3690 -1480
+  make_wire -3690 -1660 -3690 -1620
+  make_wire -3740 -1660 -3690 -1660
+  make_wire -3740 -1710 -3740 -1660
+  make_wire -3810 -1570 -3920 -1570
+  make_wire -3810 -1620 -3810 -1570
+  make_wire -3810 -1570 -3810 -1520
+  make_wire -3920 -1590 -3920 -1570
+  make_wire -3920 -1570 -3920 -1540
+  make_wire -3860 -1710 -3740 -1710
+  make_wire -3860 -1710 -3860 -1630
+  make_wire -3860 -1710 -3860 -1820
+  make_wire -3740 -1360 -3840 -1360
+  make_wire -3840 -1360 -3840 -1410
+  make_wire -3840 -1360 -3840 -1320
+  make_wire -3740 -1360 -3740 -1480
+  make_wire -3740 -1580 -3740 -1570
+  make_wire -3740 -1570 -3740 -1560
+}
+
+proc ICON_CMOS_OR_GATE args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -10} -name A
+icon_term -type input -origin {-100 10} -name B
+icon_term -type output -origin {100 -10} -name Vout
+icon_term -type inout -origin {100 30} -name a_Vdd
+icon_term -type inout -origin {100 50} -name a_Gnd
+icon_property -origin {-90 -10} -label A
+icon_property -origin {-90 10} -label B
+icon_property -origin {90 -10} -anchor e -label Vout
+icon_property -origin {90 30} -anchor e -label a_Vdd
+icon_property -origin {90 50} -anchor e -label a_Gnd
+icon_property -origin {-90 -60} -label {$name}
+icon_property -origin {-90 -40} -label CMOS_OR_GATE
+  icon_line -100 -50 100 -50 100 70 -100 70 -100 -50
+icon_property -origin {-90 80} -label {example_param=$example_param}
+  icon_property -origin {-90 140} -type user -name name -default x
+  icon_property -origin {-90 160} -type user -name example_param -default 1.0
+}
+
